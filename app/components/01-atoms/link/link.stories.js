@@ -5,7 +5,7 @@ import { Link } from "./link";
  */
 
 const meta = {
-    title: 'Atoms/Links',
+    title: 'Atoms/Link',
     component: Link
 }
 
