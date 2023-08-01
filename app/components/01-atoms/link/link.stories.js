@@ -5,17 +5,17 @@ import { Link } from "./link";
  */
 
 const meta = {
-    title: 'Atoms/Link',
-    component: Link
+	title: 'Atoms/Link',
+	component: Link
 }
 
 export default meta;
 
 export const Default = {
-    args: {
-        label: "Link",
-        href: "",
-        disabled: false,
-        underlineOnHover: true
-    },
+	args: {
+		label: "Link",
+		href: "",
+		disabled: false,
+		underlineOnHover: true
+	},
 };

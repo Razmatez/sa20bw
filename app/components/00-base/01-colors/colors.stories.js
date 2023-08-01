@@ -2,7 +2,7 @@
  * Storybook Definition.
  */
 export default {
-  title: 'Base/Colors',
+	title: 'Base/Colors',
 };
 
 export const Palettes = () => {}

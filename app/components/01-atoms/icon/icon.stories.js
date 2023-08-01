@@ -5,14 +5,14 @@ import { Icon } from "./icon";
  */
 
 const meta = {
-    title: 'Atoms/Icon',
-    component: Icon
+	title: 'Atoms/Icon',
+	component: Icon
 }
 
 export default meta;
 
 export const Default = {
-    args: {
-        label: "Icon",
-    },
+	args: {
+		label: "Icon",
+	},
 };

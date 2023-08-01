@@ -1,8 +1,8 @@
 
 export const Share = () => {
 
-    return (
-       <div></div>
-    )
+	return (
+		<div></div>
+	)
 
 }

@@ -1,8 +1,8 @@
 
 export const Hamburger = () => {
 
-    return (
-       <div></div>
-    )
+	return (
+		<div></div>
+	)
 
 }

@@ -5,14 +5,14 @@ import { Input } from "./input";
  */
 
 const meta = {
-    title: 'Atoms/Input',
-    component: Input
+	title: 'Atoms/Input',
+	component: Input
 }
 
 export default meta;
 
 export const Default = {
-    args: {
-        label: "Input",
-    },
+	args: {
+		label: "Input",
+	},
 };

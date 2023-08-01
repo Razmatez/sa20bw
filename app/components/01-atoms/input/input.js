@@ -1,8 +1,8 @@
 
 export const Input = () => {
 
-    return (
-       <div></div>
-    )
+	return (
+		<div></div>
+	)
 
 }

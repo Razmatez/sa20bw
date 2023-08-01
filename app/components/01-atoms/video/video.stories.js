@@ -5,14 +5,14 @@ import { Video } from "./video";
  */
 
 const meta = {
-    title: 'Atoms/Video',
-    component: Video
+	title: 'Atoms/Video',
+	component: Video
 }
 
 export default meta;
 
 export const Default = {
-    args: {
-        label: "Video",
-    },
+	args: {
+		label: "Video",
+	},
 };
