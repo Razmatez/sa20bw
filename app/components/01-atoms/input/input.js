@@ -1,8 +1,17 @@
+"use client";
+import { TextInput } from "flowbite-react";
 
-export const Input = () => {
+const Input = () => {
 
 	return (
-		<div></div>
+		<TextInput
+			id="email1"
+			placeholder="name@flowbite.com"
+			required
+			type="email"
+		/>
 	)
 
 }
+
+export default Input;

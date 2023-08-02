@@ -5,7 +5,7 @@ import { Hamburger } from "./hamburger";
  */
 
 const meta = {
-	title: 'Atoms/Hamburger',
+	title: "Atoms/Hamburger",
 	component: Hamburger
 }
 

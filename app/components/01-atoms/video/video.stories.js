@@ -5,7 +5,7 @@ import { Video } from "./video";
  */
 
 const meta = {
-	title: 'Atoms/Video',
+	title: "Atoms/Video",
 	component: Video
 }
 

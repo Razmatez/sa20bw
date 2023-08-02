@@ -4,7 +4,7 @@
 import { Radio } from "./radio";
 
 export default {
-	title: 'Atoms/Radio',
+	title: "Atoms/Radio",
 	component: Radio,
 	tags: ["docsPage"],
 	argTypes: {},

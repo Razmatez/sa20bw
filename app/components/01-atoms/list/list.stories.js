@@ -1,7 +1,7 @@
 /**
  * Storybook Definition.
  */
-export default { title: 'Atoms/Lists' };
+export default { title: "Atoms/Lists" };
 
 export const UnorderedList = () => `
 <div class="text-field"></div>

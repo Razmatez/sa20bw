@@ -5,7 +5,7 @@ import { Icon } from "./icon";
  */
 
 const meta = {
-	title: 'Atoms/Icon',
+	title: "Atoms/Icon",
 	component: Icon
 }
 

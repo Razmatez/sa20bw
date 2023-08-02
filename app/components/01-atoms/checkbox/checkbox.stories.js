@@ -4,7 +4,7 @@
 import { Checkbox } from "./checkbox";
 
 export default {
-	title: 'Atoms/Checkbox',
+	title: "Atoms/Checkbox",
 	component: Checkbox,
 	tags: ["docsPage"],
 	argTypes: {},

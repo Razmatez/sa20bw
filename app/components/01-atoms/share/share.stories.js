@@ -5,7 +5,7 @@ import { Share } from "./share";
  */
 
 const meta = {
-	title: 'Atoms/Share',
+	title: "Atoms/Share",
 	component: Share
 }
 

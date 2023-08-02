@@ -5,7 +5,7 @@ import { Input } from "./input";
  */
 
 const meta = {
-	title: 'Atoms/Input',
+	title: "Atoms/Input",
 	component: Input
 }
 

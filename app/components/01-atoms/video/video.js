@@ -1,8 +1,10 @@
 
-export const Video = () => {
+const Video = () => {
 
-    return (
-       <div></div>
-    )
+	return (
+		<div></div>
+	)
 
 }
+
+export default Video;

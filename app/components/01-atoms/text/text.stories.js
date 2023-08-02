@@ -1,7 +1,7 @@
 /**
  * Storybook Definition.
  */
-export default { title: 'Atoms/Text' };
+export default { title: "Atoms/Text" };
 
 // Loop over items in headingData to show each one in the example below.
 

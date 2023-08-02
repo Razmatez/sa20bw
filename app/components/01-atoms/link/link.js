@@ -1,7 +1,7 @@
 
 export const Link = ({
 	label,
-	href="#",
+	href = "#",
 	disabled = false,
 	underlineOnHover = true
 }) => {
