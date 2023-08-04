@@ -5,14 +5,14 @@ import { Hamburger } from "./hamburger";
  */
 
 const meta = {
-    title: 'Atoms/Hamburger',
-    component: Hamburger
+	title: "Atoms/Hamburger",
+	component: Hamburger
 }
 
 export default meta;
 
 export const Default = {
-    args: {
-        label: "Hamburger",
-    },
+	args: {
+		label: "Hamburger",
+	},
 };

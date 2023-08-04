@@ -1,8 +1,10 @@
 
-export const Hamburger = () => {
+const Hamburger = () => {
 
-    return (
-       <div></div>
-    )
+	return (
+		<div></div>
+	)
 
 }
+
+export default Hamburger;

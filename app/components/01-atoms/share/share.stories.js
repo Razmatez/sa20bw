@@ -5,14 +5,14 @@ import { Share } from "./share";
  */
 
 const meta = {
-    title: 'Atoms/Share',
-    component: Share
+	title: "Atoms/Share",
+	component: Share
 }
 
 export default meta;
 
 export const Default = {
-    args: {
-        label: "Share",
-    },
+	args: {
+		label: "Share",
+	},
 };

@@ -1,6 +1,59 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "plugin:storybook/recommended"
-  ]
+    "extends": [
+        "next/core-web-vitals",
+        "plugin:storybook/recommended"
+    ],
+    "rules": {
+        "arrow-spacing": [
+            "warn",
+            {
+                "before": true,
+                "after": true
+            }
+        ],
+        "indent": [
+            "warn",
+            "tab"
+        ],
+        "brace-style": [
+            "warn",
+            "1tbs",
+            {
+                "allowSingleLine": true
+            }
+        ],
+        "keyword-spacing": [
+            "warn",
+            {
+                "before": true,
+                "after": true
+            }
+        ],
+        "space-infix-ops": [
+            "error",
+            {
+                "int32Hint": false
+            }
+        ],
+        "key-spacing": [
+            "warn",
+            {
+                "afterColon": true
+            }
+        ],
+        "object-curly-spacing": [
+            "warn",
+            "always"
+        ],
+        "no-trailing-spaces": [
+            "warn",
+            {
+                "skipBlankLines": false
+            }
+        ],
+        "quotes": [
+            "warn",
+            "double"
+        ]
+    }
 }
