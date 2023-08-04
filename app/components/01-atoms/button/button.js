@@ -4,21 +4,21 @@ import { Button as ButtonComponent } from "flowbite-react";
 const Button = (props) => {
 
 	const {
-		isPrimary = true
+		isPrimary = true,
+		text = "Button",
+		type = "button",
+		onClick
 	} = props;
 
 	return (
 		<>
-			{isPrimary ? (
-			    <ButtonComponent>
-                    Primary
-				</ButtonComponent>
-			) :	(
-				<ButtonComponent color="gray">
-                    Secondary
-				</ButtonComponent>
-			)}
-
+			<ButtonComponent
+				className={isPrimary ? "bg-green-400" : "bg-stone-200 text-slate-950"}
+				type={type}
+				onClick={onClick}
+			>
+				{text}
+			</ButtonComponent>
 		</>
 	)
 }
