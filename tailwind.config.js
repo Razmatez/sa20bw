@@ -21,16 +21,15 @@ module.exports = {
 			lightBlue: "#00FFFF",
 			lime: "#DAFF00",
 			brightGreen: "#59FF26",
-			
 			// Secondary colors
 			black: "#000000",
 			darkGrey: "#4D4D4D",
 			darkYellow: "#DAFF00",
-			//yellow: "#ffff00"  tailwind = yellow-200-accent
+			yellow: "#ffff00",
 			darkGreen: "#009426",
 			green: "#00ff00",
 			grey: "#c3c3c3",
-			//lightGrey: "#f5f5f5" tailwind = grey-100
+			lightGrey: "#f5f5f5",
 			brightBlue: "#0000FF",
 			electricBlue: "#00a0ff",
 			red: "#be0010",
