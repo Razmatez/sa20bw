@@ -1,13 +1,20 @@
 /**
  * Storybook Definition.
  */
-import { Checkbox } from "./checkbox";
+import Checkbox from "./checkbox";
 
 export default {
 	title: "Atoms/Checkbox",
 	component: Checkbox,
-	tags: ["docsPage"],
-	argTypes: {},
+	argTypes: {
+		handleOnChange: { action: "onChange" }
+	},
 };
 
-export const checkbox = () => <Checkbox key={1} checked={true} label={"Some label"}/>;
+export const Default = {
+	name: "Checkbox",
+	args: {
+		id: "",
+		label: "Checkbox label",
+	},
+};
