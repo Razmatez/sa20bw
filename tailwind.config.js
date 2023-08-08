@@ -15,8 +15,8 @@ module.exports = {
 	      "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
 			},
 			fontFamily: {
-				"barlow-semi-condensed": ["Barlow Semi Condensed", "sans"],
-				"Rubik": ["Rubik", "sans"]
+				"barlow-semi-condensed": ["Barlow Semi Condensed", "sans-serif"],
+				"Rubik": ["Rubik", "sans-serif"]
 			},
 		},
 	},
