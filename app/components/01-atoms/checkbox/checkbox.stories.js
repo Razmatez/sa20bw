@@ -6,9 +6,7 @@ import Checkbox from "./checkbox";
 export default {
 	title: "Atoms/Checkbox",
 	component: Checkbox,
-	argTypes: {
-		handleOnChange: { action: "onChange" }
-	},
+	argTypes: {},
 };
 
 export const Default = {
