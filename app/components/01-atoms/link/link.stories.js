@@ -1,21 +1,16 @@
-import { Link } from "./link";
+import Link from "./link";
 
-/**
- * Storybook Definition.
- */
-
-const meta = {
+export default {
 	title: "Atoms/Link",
 	component: Link
 }
 
-export default meta;
-
 export const Default = {
+	name: "Link",
 	args: {
-		label: "Link",
-		href: "",
 		disabled: false,
+		href: "",
+		label: "Link",
 		underlineOnHover: true
 	},
 };
