@@ -6,10 +6,13 @@ import Checkbox from "./checkbox";
 export default {
 	title: "Atoms/Checkbox",
 	component: Checkbox,
-	argTypes: {},
+	argTypes: {
+		handleOnChange: { action: "onChange" }
+	},
 };
 
-export const Primary = {
+export const Default = {
+	name: "Checkbox",
 	args: {
 		id: "",
 		label: "Checkbox label",
