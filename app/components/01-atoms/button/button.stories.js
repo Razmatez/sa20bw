@@ -1,39 +1,28 @@
-import { Button } from "./button";
+import Button from "./button";
 
-// More on how to set up stories at: https://storybook.js.org/docs/7.0/react/writing-stories/introduction
-const meta = {
+export default {
 	title: "Atoms/Button",
 	component: Button,
-	tags: ["docsPage"],
-	argTypes: {},
+	argTypes: {
+		type: {
+			control: "select",
+			options: ["button", "reset", "submit"]
+		}
+	},
 };
 
-export default meta;
-
-// More on writing stories with args: https://storybook.js.org/docs/7.0/react/writing-stories/args
 export const Primary = {
 	args: {
-		primary: true,
-		label: "Button",
+		isPrimary: true,
+		text: "Button",
+		type: "button",
+		onClick: () => {}
 	},
 };
 
 export const Secondary = {
 	args: {
-		label: "Button",
-	},
-};
-
-export const Large = {
-	args: {
-		size: "large",
-		label: "Button",
-	},
-};
-
-export const Small = {
-	args: {
-		size: "small",
-		label: "Button",
+		...Primary.args,
+		isPrimary: false
 	},
 };
