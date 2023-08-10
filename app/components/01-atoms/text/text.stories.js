@@ -1,16 +1,12 @@
-/**
- * Storybook Definition.
- */
-export default { title: "Atoms/Text" };
+import Text from "./text";
 
-// Loop over items in headingData to show each one in the example below.
+export default {
+	title: "Atoms/Text",
+	component: Text
+};
 
-export const headingsExamples = () => {};
-
-export const blockquoteExample = () => {};
-
-export const preformatted = () => {};
-
-export const random = () => {};
-
-export const codeExample = () => {};
+export const Default = {
+	args: {
+		content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+	},
+};

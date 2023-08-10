@@ -1,7 +1,15 @@
-const Text = () => {
+const Text = (props) => {
+
+	const { content } = props;
 
 	return (
-		<div></div>
+
+		<p>
+
+			{content}
+
+		</p>
+
 	)
 }
 
