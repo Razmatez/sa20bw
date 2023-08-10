@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-       <button onClick={getData}>click me</button>
+       <button className="font-barlow-semi-condensed" onClick={getData}>click me</button>
       <p>{title}</p>
        <img src={image} />
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
