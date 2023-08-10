@@ -1,13 +1,14 @@
-/**
- * Storybook Definition.
- */
-import { Tag } from "./tag";
+import Tag from "./tag";
 
 export default {
 	title: "Atoms/Tag",
-	component: Tag,
-	tags: ["docsPage"],
-	argTypes: {},
+	component: Tag
 };
 
-export const tag = () => <Tag />;
+export const Default = {
+	name: "Tag",
+	args: {
+		content: "Tag text",
+		link: ""
+	},
+};
