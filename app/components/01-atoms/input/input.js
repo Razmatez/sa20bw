@@ -1,15 +1,42 @@
 "use client";
-import { TextInput } from "flowbite-react";
+import { Label, TextInput } from "flowbite-react";
 
-const Input = () => {
+const Input = (props) => {
+
+	const {
+		id,
+		label,
+		placeholder,
+		required,
+		type
+	 } = props;
 
 	return (
-		<TextInput
-			id="email1"
-			placeholder="name@flowbite.com"
-			required
-			type="email"
-		/>
+
+		<div>
+
+			{label && (
+
+				<div className="mb-2 block">
+
+					<Label
+						htmlFor={id}
+						value={label && required ? `${label} *` : label}
+					/>
+
+				</div>
+
+			)}
+
+			<TextInput
+				id={id}
+				placeholder={placeholder}
+				required={required}
+				type={type}
+			/>
+
+		</div>
+
 	)
 
 }
