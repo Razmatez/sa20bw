@@ -1,10 +1,17 @@
+"use client";
 
-const Video = () => {
-
+const Video = ({ videoUrl, width, height }) => {
 	return (
-		<div></div>
-	)
 
-}
+		<iframe
+			width={width}
+			height={height}
+			src={videoUrl}
+			allowfullscreen>
+
+		</iframe>
+
+	);
+};
 
 export default Video;

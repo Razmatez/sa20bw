@@ -1,18 +1,15 @@
-import { Video } from "./video";
+import Video from './video';
 
-/**
- * Storybook Definition.
- */
+export default {
+  title: 'Atoms/Video',
+  component: Video,
+};
 
-const meta = {
-	title: "Atoms/Video",
-	component: Video
-}
+const Template = (args) => <Video {...args} />;
 
-export default meta;
-
-export const Default = {
-	args: {
-		label: "Video",
-	},
+export const Default = Template.bind({});
+Default.args = {
+  videoUrl: "https://www.youtube.com/embed/936zAgDSrVA",
+  width: "900",
+  height: "315"
 };
