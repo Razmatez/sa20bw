@@ -1,10 +1,11 @@
+"use client";
 
-const Video = () => {
-
+const Video = ({ videoUrl }) => {
 	return (
-		<div></div>
-	)
-
-}
-
-export default Video;
+		<video className="w-96" controls type="video/mp4">
+			<source src={videoUrl}  />
+		</video>
+	);
+  };
+  
+  export default Video;
