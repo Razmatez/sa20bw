@@ -1,11 +1,17 @@
 "use client";
 
-const Video = ({ videoUrl }) => {
+const Video = ({ videoUrl, width, height }) => {
 	return (
-		<video className="w-96" controls type="video/mp4">
-			<source src={videoUrl}  />
-		</video>
+
+		<iframe
+			width={width}
+			height={height}
+			src={videoUrl}
+			allowfullscreen>
+
+		</iframe>
+
 	);
-  };
-  
-  export default Video;
+};
+
+export default Video;

@@ -9,5 +9,7 @@ const Template = (args) => <Video {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  videoUrl: "https://www.youtube.com/embed/qN4ooNx77u0",
+  videoUrl: "https://www.youtube.com/embed/936zAgDSrVA",
+  width: "900",
+  height: "315"
 };
