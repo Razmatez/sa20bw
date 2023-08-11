@@ -1,18 +1,24 @@
 /**
  * Storybook Definition.
  */
-export default { title: "Atoms/Lists" };
+import List from "./list";
 
-export const UnorderedList = () => `
-<div class="text-field"></div>
-`;
-export const OrderedList = () => `
-<div class="text-field">
+export default {
+	title: "Atoms/List",
+	component: List,
+	argTypes: {}
+};
 
-</div>
-`;
-export const DescriptionList = () => `
-<div class="text-field">
+export const BulletedList = {
+	args: {
+		items: ["List item 1", "List item 2", "List item 3", "List item 4"],
+		styled: true
+	}
+};
 
-</div>
-`;
+export const UnbulletedList = {
+	args: {
+		...BulletedList.args,
+		styled: false
+	}
+};
