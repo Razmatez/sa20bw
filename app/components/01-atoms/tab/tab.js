@@ -1,10 +1,37 @@
-"use client";
+import React from 'react';
+import { Tabs } from 'flowbite-react';
 
-const Tab = (props) => {
+export default function DefaultTabs(props) {
+
+	const { tabs } = props;
+
 	return (
-		<div>
-		</div>
-	)
+		<Tabs.Group
+			aria-label="Default tabs"
+			style="default"
+		>
+
+			{tabs.map((tab, index) => (
+
+				<Tabs.Item
+					key={index}
+					icon={tab.icon}
+					title={tab.title}
+					disabled={tab.disabled}
+				>
+
+					<p>
+
+						{tab.content}
+
+					</p>
+
+				</Tabs.Item>
+
+			))}
+
+		</Tabs.Group>
+
+	);
 }
 
-export default Tab;
