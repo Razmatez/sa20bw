@@ -1,18 +1,14 @@
-import { Icon } from "./icon";
+import Icon from "./icon";
 
-/**
- * Storybook Definition.
- */
-
-const meta = {
+export default {
 	title: "Atoms/Icon",
 	component: Icon
 }
 
-export default meta;
-
 export const Default = {
+	name: "Icon",
 	args: {
-		label: "Icon",
-	},
+		src: "https://placehold.co/30x30",
+		altText: "icon"
+	}
 };
