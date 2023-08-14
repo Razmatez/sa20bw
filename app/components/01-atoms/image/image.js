@@ -1,7 +1,11 @@
+"use client";
 
-
-const Image = () => {
+const Image = ({ image, style, altText }) => {
 	return (
-		<img src="https://via.placeholder.com/800x600" alt="This is the alt tag"/>
-	)
-}
+
+		<img className={style} src={image} alt={altText} />
+
+	);
+};
+
+export default Image;
