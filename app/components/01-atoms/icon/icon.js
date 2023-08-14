@@ -1,8 +1,21 @@
+import Image from "next/image";
 
-const Icon = () => {
+const Icon = (props) => {
+
+	const {
+		src,
+		altText
+	} = props;
 
 	return (
-		<div></div>
+
+		<Image
+			alt={altText}
+			height={30}
+			width={30}
+			src={src}
+		/>
+
 	)
 
 }
