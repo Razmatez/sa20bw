@@ -1,13 +1,13 @@
-/**
- * Storybook Definition.
- */
-import { Pagination } from "./pagination";
+import Pagination from "./pagination";
 
 export default {
 	title: "Atoms/Pagination",
 	component: Pagination,
-	tags: ["docsPage"],
-	argTypes: {},
+	argTypes: {}
 };
 
-export const pagination = () => <Pagination />;
+export const Default = {
+	args: {
+
+	}
+}
