@@ -1,18 +1,16 @@
-import { Hamburger } from "./hamburger";
+import Hamburger from "./hamburger";
 
-/**
- * Storybook Definition.
- */
-
-const meta = {
+export default {
 	title: "Atoms/Hamburger",
 	component: Hamburger
 }
 
-export default meta;
-
 export const Default = {
 	args: {
-		label: "Hamburger",
-	},
+		menuItems: [
+			{ item: "Home", link: "#" },
+			{ item: "About", link: "#" },
+			{ item: "Contact", link: "#" }
+		]
+	}
 };
