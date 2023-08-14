@@ -1,29 +1,18 @@
-import Image from "next/image";
+import Icon from "../icon/icon"
 
 const Share = (props) => {
 
-	const { items } = props;
+	const { src, link, altText } = props;
 
 	return (
-		<div className="flex items-center">
+		<a href={link}>
+			<Icon
+				src={src}
+				alt={altText}
+			>
 
-			{items.map((item, index) => (
-				<a href={item.href}>
-					<Image
-						key={index}
-						src={item.src}
-						alt={item.altText}
-						href={item.href}
-						width={30}
-						height={30}
-					>
-
-					</Image>
-				</a>
-
-			))}
-
-		</div>
+			</Icon>
+		</a>
 
 	);
 
