@@ -1,18 +1,16 @@
-import { Share } from "./share";
+import Share from "./share"
 
-/**
- * Storybook Definition.
- */
+export default {
+	title: "Atoms/share",
+	component: Share,
 
-const meta = {
-	title: "Atoms/Share",
-	component: Share
-}
-
-export default meta;
+};
 
 export const Default = {
+	name: "Social",
 	args: {
-		label: "Share",
-	},
+		src: "https://placehold.co/30x30",
+		altText: "",
+		link: "",
+	}
 };
