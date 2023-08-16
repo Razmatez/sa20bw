@@ -9,11 +9,6 @@ module.exports = {
 	],
 	theme: {
 		extend: {
-			backgroundImage: {
-				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-				"gradient-conic":
-	      "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-			},
 			colors: {
 				// Primary colors
 				darkBlue: "#0A003E",
@@ -37,8 +32,15 @@ module.exports = {
 			},
 			fontFamily: {
 				"barlow-semi-condensed": ["Barlow Semi Condensed", "sans-serif"],
-				"Rubik": ["Rubik", "sans-serif"]
+				"rubik": ["Rubik", "sans-serif"]
 			},
+			fontSize: {
+				xs: ["12px", "16px"],
+				sm: ["14px", "20px"],
+				base: ["16px", "24px"],
+				lg: ["18px", "24px"],
+				xl: ["20px", "28px"]
+			}
 		}
 	},
 	plugins: [

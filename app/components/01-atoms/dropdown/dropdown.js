@@ -23,7 +23,7 @@ const Dropdown = (props) => {
 			},
 			size: {
 				sm: "text-base px-3 py-2 w-[327px] justify-between",
-				lg: "text-[18px] px-4 py-3 w-[327px] justify-between"
+				lg: "text-lg px-4 py-3 w-[327px] justify-between"
 			}
 		},
 		dropdown: {
@@ -32,7 +32,7 @@ const Dropdown = (props) => {
 			floating: {
 				base: "rounded-sm shadow",
 				item: {
-					base: `flex items-center justify-start ${size === "sm" ? "px-4 py-2" : "px-4 py-3"} text-base text-darkBlue cursor-pointer w-full hover:bg-lightGrey focus::bg-lightGrey`
+					base: `flex items-center justify-start ${size === "sm" ? "px-4 py-2" : "px-4 py-3"} text-base text-darkBlue cursor-pointer w-full hover:bg-lightGrey focus:bg-lightGrey`
 				}
 			}
 		}
