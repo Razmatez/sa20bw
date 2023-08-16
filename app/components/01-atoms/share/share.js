@@ -1,17 +1,26 @@
-import Icon from "../icon/icon"
+import Icon from "../icon/icon";
 
 const Share = (props) => {
 
-	const { src, link, altText } = props;
+	const {
+		src,
+		altText,
+		link,
+		height,
+		width
+	} = props;
 
 	return (
+
 		<a href={link}>
+
 			<Icon
 				src={src}
 				alt={altText}
-			>
+				height={height}
+				width={width}
+			/>
 
-			</Icon>
 		</a>
 
 	);
