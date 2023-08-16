@@ -1,3 +1,104 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+
+	@font-face {
+		font-family: "Barlow Semi Condensed Bold";
+		font-weight: 700;
+		src: url("../assets/fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Bold.ttf") format("truetype");
+	}
+
+	@font-face {
+		font-family: "Rubik";
+		font-weight: 400;
+		src: url("../assets/fonts/Rubik/Rubik-Regular.ttf") format("truetype");
+	}
+
+	@font-face {
+		font-family: "Rubik Medium";
+		font-weight: 500;
+		src: url("../assets/fonts/Rubik/Rubik-Medium.ttf") format("truetype");
+	}
+
+	/* Headings */
+	h1 {
+		@apply font-barlow text-h1 text-darkBlue
+	}
+
+	h2 {
+		@apply font-barlow text-h2 text-darkBlue;
+	}
+
+	h3 {
+		@apply font-barlow text-h3 text-darkBlue;
+	}
+
+	h4 {
+		@apply font-barlow text-h4 text-darkBlue;
+	}
+
+	h5 {
+		@apply font-barlow text-h5 text-darkBlue;
+	}
+
+	/* Body */
+	.body-xl {
+		@apply font-rubik text-xl text-darkBlue;
+	}
+
+	.body-lg {
+		@apply font-rubik text-lg text-darkBlue;
+	}
+
+	.body-base {
+		@apply font-rubik text-base text-darkBlue;
+	}
+
+	.body-sm {
+		@apply font-rubik text-sm text-darkBlue;
+	}
+
+	.body-xs {
+		@apply font-rubik text-xs text-darkBlue;
+	}
+
+	/* Body Bold */
+	.body-xl-bold {
+		@apply font-rubik-medium body-xl;
+	}
+
+	.body-lg-bold {
+		@apply font-rubik-medium body-lg;
+	}
+
+	.body-base-bold {
+		@apply font-rubik-medium body-base;
+	}
+
+	.body-sm-bold {
+		@apply font-rubik-medium body-sm;
+	}
+
+	.body-xs-bold {
+		@apply font-rubik-medium body-xs;
+	}
+
+	/* Label */
+	.label-lg {
+		@apply body-sm-bold;
+		letter-spacing: 0.05em;
+	}
+
+	.label-base {
+		@apply body-xs-bold;
+		letter-spacing: 0.05em;
+	}
+
+	.label-sm {
+		@apply label-base;
+		font-size: 11px;
+	}
+
+}

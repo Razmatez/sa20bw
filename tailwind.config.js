@@ -4,8 +4,7 @@ module.exports = {
 		"./node_modules/flowbite-react/**/*.js",
 		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
 		"./public/**/*.html",
-		"./components/**/*.{js,ts,jsx,tsx,mdx}",
-		"./app/**/*.{js,ts,jsx,tsx,mdx}",
+		"./app/**/*.{js,ts,jsx,tsx,mdx}"
 	],
 	theme: {
 		extend: {
@@ -31,15 +30,54 @@ module.exports = {
 				magenta: "#FD00BE",
 			},
 			fontFamily: {
-				"barlow-semi-condensed": ["Barlow Semi Condensed", "sans-serif"],
-				"rubik": ["Rubik", "sans-serif"]
+				"barlow": ["Barlow Semi Condensed Bold", "sans-serif"],
+				"rubik": ["Rubik", "sans-serif"],
+				"rubik-medium": ["Rubik Medium", "sans-serif"]
 			},
 			fontSize: {
-				xs: ["12px", "16px"],
-				sm: ["14px", "20px"],
-				base: ["16px", "24px"],
-				lg: ["18px", "24px"],
-				xl: ["20px", "28px"]
+				// Headings
+				h1: ["32px", {
+					lineHeight: "36px",
+					letterSpacing: "0.015em"
+				  }],
+				h2: ["24px", {
+					lineHeight: "32px",
+					letterSpacing: "0.015em"
+				}],
+				h3: ["24px", {
+					lineHeight: "28px",
+					letterSpacing: "0.015em"
+				}],
+				h4: ["20px", {
+					lineHeight: "24px",
+					letterSpacing: "0.015em"
+				}],
+				h5: ["16px", {
+					lineHeight: "20px",
+					letterSpacing: "0.015em"
+				}],
+
+				// Body
+				xl: ["20px", {
+					lineHeight: "28px",
+					letterSpacing: "0.015em"
+				}],
+				lg: ["18px", {
+					lineHeight: "24px",
+					letterSpacing: "0.015em"
+				}],
+				base: ["16px", {
+					lineHeight: "24px",
+					letterSpacing: "0.01em"
+				}],
+				sm: ["14px", {
+					lineHeight: "20px",
+					letterSpacing: "0.005em"
+				}],
+				xs: ["12px", {
+					lineHeight: "16px",
+					letterSpacing: "0.005em"
+				}],
 			}
 		}
 	},
