@@ -1,21 +1,19 @@
-import divider from "./divider";
+import Divider from "./divider";
 
 export default {
-    title: "Atoms/divider",
-    component: divider,
+    title: "Atoms/Divider",
+    component: Divider,
     argTypes: {}
 }
 
 export const Light = {
     args: {
-        styles: "bg-grey h-1",
-
+        darkTheme: false
     },
 };
 
 export const Dark = {
     args: {
-        styles: "bg-black h-1",
-
+        darkTheme: true
     },
 };

@@ -1,10 +1,17 @@
-const divider = (props) => {
+const Divider = (props) => {
 
-    const { styles } = props
+    const {
+        darkTheme = false
+    } = props;
+
+    const renderClassNames = darkTheme ? "bg-grey h-1" : "bg-black h-1";
 
     return (
-        <hr className={styles}></hr >
+
+        <hr className={renderClassNames} />
+
     )
+
 }
 
-export default divider;
+export default Divider;
