@@ -1,19 +1,23 @@
+"use client";
 import Image from "next/image";
 
 const Icon = (props) => {
 
 	const {
 		src,
-		altText
+		altText,
+		height,
+		width
 	} = props;
 
 	return (
 
 		<Image
-			alt={altText}
-			height={30}
-			width={30}
+			className="w-full h-full"
 			src={src}
+			alt={altText}
+			height={height}
+			width={width}
 		/>
 
 	)
