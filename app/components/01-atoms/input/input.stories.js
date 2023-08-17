@@ -1,3 +1,5 @@
+import { HiMail } from 'react-icons/hi';
+
 import Input from "./input";
 
 export default {
@@ -18,7 +20,9 @@ export const Default = {
 	args: {
 		id: "",
 		placeholder: "name@email.com",
-		required: true
+		required: true,
+		icon: HiMail,
+		helperText: ""
 	},
 };
 
