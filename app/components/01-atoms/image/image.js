@@ -1,9 +1,19 @@
 "use client";
+import { Image as NextImage } from "next/image";
 
-const Image = ({ image, style, altText }) => {
+const Image = (props) => {
+
+	const {
+		src,
+		altText
+	} = props;
+
 	return (
 
-		<img className={style} src={image} alt={altText} />
+		<NextImage
+			src={src}
+			alt={altText}
+		/>
 
 	);
 };

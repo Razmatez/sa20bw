@@ -102,3 +102,11 @@
 	}
 
 }
+
+/* Override default styles */
+
+@media (min-width: 768px) {
+	.md\:space-x-8> :not([hidden])~ :not([hidden]) {
+		margin: 0 !important;
+	}
+}
