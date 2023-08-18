@@ -1,6 +1,5 @@
 "use client";
-import { Button as ButtonComponent } from "flowbite-react";
-import { Flowbite } from "flowbite-react";
+import { Button as ButtonComponent, Flowbite } from "flowbite-react";
 
 const Button = (props) => {
 

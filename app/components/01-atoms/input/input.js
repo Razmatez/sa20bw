@@ -1,7 +1,6 @@
 "use client";
-import { Label, TextInput } from "flowbite-react";
+import { Label, TextInput, Flowbite } from "flowbite-react";
 import { HiMail } from 'react-icons/hi';
-import { Flowbite } from "flowbite-react";
 
 const Input = (props) => {
 
@@ -55,7 +54,6 @@ const Input = (props) => {
 					required={required}
 					type={type}
 					icon={HiMail}
-
 				/>
 
 			</div>
