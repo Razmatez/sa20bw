@@ -2,10 +2,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-import SocialMenu from "./components/02-molecules/social-menu/social-menu";
-import Subscribe from "./components/02-molecules/subscribe/subscribe";
-import FooterMenu from "./components/02-molecules/footer-menu/footer-menu"
-
+import Footer from "./components/03-organisms/footer/footer"
 
 export default function Home() {
 
@@ -24,16 +21,12 @@ export default function Home() {
 	}
 
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-between p-24">
-
-			<SocialMenu />
-			<Subscribe />
-			<FooterMenu />
-
-
+		<main className="">
 			<button className="font-barlow-semi-condensed" onClick={getData}>click me</button>
 			<p>{title}</p>
 			<img src={image} />
+
+			<Footer />
 
 		</main>
 	)
