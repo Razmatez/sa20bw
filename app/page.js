@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 
 import SocialMenu from "./components/02-molecules/social-menu/social-menu";
+import Subscribe from "./components/02-molecules/subscribe/subscribe"
 
 export default function Home() {
 
@@ -24,6 +25,7 @@ export default function Home() {
 		<main className="flex min-h-screen flex-col items-center justify-between p-24">
 
 			<SocialMenu />
+			<Subscribe />
 
 			<button className="font-barlow-semi-condensed" onClick={getData}>click me</button>
 			<p>{title}</p>
