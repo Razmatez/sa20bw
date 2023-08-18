@@ -4,11 +4,6 @@ import axios from "axios";
 
 import Footer from "./components/03-organisms/footer/footer"
 
-import SocialMenu from "./components/02-molecules/social-menu/social-menu";
-import Subscribe from "./components/02-molecules/subscribe/subscribe";
-import FooterMenu from "./components/02-molecules/footer-menu/footer-menu"
-
-
 export default function Home() {
 
 	const [title, setTitle] = useState("");
