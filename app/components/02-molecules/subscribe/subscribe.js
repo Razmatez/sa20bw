@@ -1,6 +1,6 @@
 import Button from "../../01-atoms/button/button";
 import Input from "../../01-atoms/input/input";
-import Text from "../../01-atoms/text/text"
+import Text from "../../01-atoms/text/text";
 
 const Subscribe = () => {
 
