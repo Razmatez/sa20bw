@@ -43,7 +43,7 @@ const footerSections = [
     },
 ];
 
-const FooterLinks = () => {
+const FooterMenu = () => {
     return (
         <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-4 sm:gap-4">
 
@@ -76,4 +76,4 @@ const FooterLinks = () => {
     )
 }
 
-export default FooterLinks;
+export default FooterMenu;

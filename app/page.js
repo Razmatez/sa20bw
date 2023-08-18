@@ -4,7 +4,7 @@ import axios from "axios";
 
 import SocialMenu from "./components/02-molecules/social-menu/social-menu";
 import Subscribe from "./components/02-molecules/subscribe/subscribe";
-import FooterLinks from "./components/02-molecules/footer/footer-menu-links"
+import FooterMenu from "./components/02-molecules/footer-menu/footer-menu"
 
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
 
 			<SocialMenu />
 			<Subscribe />
-			<FooterLinks />
+			<FooterMenu />
 
 
 			<button className="font-barlow-semi-condensed" onClick={getData}>click me</button>
