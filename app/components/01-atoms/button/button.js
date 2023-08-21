@@ -12,41 +12,26 @@ const Button = (props) => {
 
 	const customTheme = {
 		button: {
+			base: "group flex h-min items-center justify-center p-0 text-center",
+			color: {
+				primary: "bg-darkBlue text-lightGrey",
+				secondary: "border-2 border-darkBlue bg-transparent text-darkBlue",
+				tertiary: "bg-transparent text-darkBlue",
+				blue: "bg-lightBlue text-darkBlue"
+			},
+			inner: {
+				base: "flex items-center",
+				outline: "border-0"
+			},
 			pill: {
 				off: "rounded-sm"
 			},
-			base: "group flex h-min items-center justify-center p-0 text-center",
-			inner: {
-				base: "flex items-center"
-			},
 			size: {
-				sm: "font-barlow text-[14px] leading-[18px] tracking-[0.04em] py-1.5 px-4",
-				md: "font-barlow text-base tracking-[0.04em] py-2 px-4",
-				lg: "font-barlow text-base tracking-[0.04em] py-3 px-4"
+				sm: "h-8 button-sm px-4",
+				md: "h-10 button-base px-4",
+				lg: "h-12 button-base px-4"
 			}
 		}
-	}
-
-	const renderClassName = () => {
-
-		let className = "";
-
-		switch (variant) {
-		case "secondary":
-			className = "border-2 border-darkBlue bg-transparent text-darkBlue"
-			break;
-		case "tertiary":
-			className = "bg-transparent text-darkBlue"
-			break;
-		case "blue":
-			className = "bg-lightBlue text-darkBlue"
-			break;
-		default:
-			className = "bg-darkBlue text-lightGrey"
-		}
-
-		return className;
-
 	}
 
 	return (
@@ -54,7 +39,7 @@ const Button = (props) => {
 		<Flowbite theme={{ theme: customTheme }}>
 
 			<ButtonComponent
-				className={`rounded-sm ${renderClassName()}`}
+				color={variant}
 				size={size}
 				type={type}
 				onClick={onClick}

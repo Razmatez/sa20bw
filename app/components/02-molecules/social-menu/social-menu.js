@@ -19,15 +19,16 @@ const SocialMenu = () => {
 	const renderIcons = icons.map((icon, index) => (
 
 		<div
-			className="ml-[3px] my-[3px] mr-[11px] last:mr-[3px] w-[18px] h-[18px]"
+			className="mr-4 last:mr-0"
 			key={index}
 		>
 
 			<Share
-				fill
 				src={icon.icon}
 				altText={icon.alt}
 				link={icon.link}
+				height={24}
+				width={24}
 			/>
 
 		</div>

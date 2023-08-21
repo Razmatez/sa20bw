@@ -10,7 +10,7 @@ const ItemLink = (props) => {
 	return (
 
 		<Link
-			className={`flex items-center font-barlow text-[14px] leading-[18px] tracking-[0.04em] text-darkBlue ${className}`}
+			className={`flex items-center button-sm text-darkBlue ${className}`}
 			href={link}
 		>
 			{props.children}

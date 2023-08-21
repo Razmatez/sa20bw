@@ -25,16 +25,11 @@ export default function Home() {
 	}
 
 	return (
-		<main className="">
+		<main>
 
 			<Navbar />
 
-			<Subscribe />
-			<FooterMenu />
-
-			{/* <button className="font-barlow-semi-condensed" onClick={getData}>click me</button>
-			<p>{title}</p>
-			<img src={image} /> */}
+			<br />
 
 			<Footer />
 

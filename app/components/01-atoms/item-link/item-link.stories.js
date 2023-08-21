@@ -8,6 +8,7 @@ export default {
 export const Default = {
 	name: "ItemLink",
 	args: {
+		className: "",
 		label: "Link",
 		link: ""
 	},

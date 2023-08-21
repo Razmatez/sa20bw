@@ -10,7 +10,7 @@ import SocialMenu from "../../02-molecules/social-menu/social-menu";
 
 import Logo from "../../../assets/icons/logo.svg";
 import AddIcon from "../../../assets/icons/button/add.svg";
-import LoginIcon from "../../../assets/icons/navbar/login-register.svg";
+import LoginIcon from "../../../assets/icons/navbar/login.svg";
 import SearchIcon from "../../../assets/icons/navbar/search.svg";
 
 const Navbar = () => {
@@ -21,6 +21,7 @@ const Navbar = () => {
 				base: "",
 			},
 			collapse: {
+				base: "w-full md:block",
 				list: "flex flex-col items-center md:flex-row"
 			},
 			link: {
@@ -46,7 +47,7 @@ const Navbar = () => {
 		>
 
 			<NavComponent.Link
-				className="font-barlow text-white text-base tracking-[0.04em]"
+				className="button-base text-lightGrey"
 				href={item.link}
 			>
 				{item.item.toUpperCase()}
@@ -64,34 +65,30 @@ const Navbar = () => {
 
 				{/* Secondary menu */}
 
-				<div className="flex items-center w-full justify-end py-[9px] pr-16 bg-purple">
+				<div className="flex items-center justify-end w-full h-12 pr-16 bg-purple">
 
 					<ItemLink
-						className="mr-6 px-4 py-[11px] text-white"
+						className="mr-6 px-4 py-3 text-lightGrey"
 						link="/tickets"
 					>
 						TICKETS
 					</ItemLink>
 
-					<div className="w-px h-6 bg-[#B6B3C5]" />
+					<div className="w-px h-6 bg-divider" />
 
 					<ItemLink
-						className="mx-6 pl-3 p-1 pr-4 text-white"
+						className="mx-6 pl-3 pr-4 text-lightGrey"
 						link="/login"
 					>
 
-						<div className="p-[3px]">
+						<Icon
+							src={LoginIcon}
+							altText="login"
+							height={24}
+							width={24}
+						/>
 
-							<Icon
-								src={LoginIcon}
-								altText="login-register"
-								height={18}
-								width={18}
-							/>
-
-						</div>
-
-						<span className="ml-[11px]">
+						<span className="ml-2">
 							LOGIN/REGISTER
 						</span>
 
@@ -103,7 +100,7 @@ const Navbar = () => {
 
 				{/* Primary menu */}
 
-				<div className="flex flex-wrap w-full items-center justify-between py-[26px] px-16 bg-darkBlue">
+				<div className="flex flex-nowrap w-full h-24 items-center px-16 bg-darkBlue">
 
 					<NavComponent.Brand href="/">
 
@@ -118,7 +115,7 @@ const Navbar = () => {
 
 					<NavComponent.Collapse>
 
-						<div className="flex px-[53px]">
+						<div className="flex mx-auto">
 
 			  				{renderMenuItems}
 
@@ -132,17 +129,27 @@ const Navbar = () => {
 							>
 								<span>CHOOSE MY TEAM</span>
 
-								<span className="w-3 h-3 ml-3 -mr-0.5">
-									<Icon src={AddIcon} />
+								<span className="ml-2 -mr-1">
+
+									<Icon
+										src={AddIcon}
+										height={24}
+										width={24}
+									 />
+
 								</span>
 
 							</Button>
 
 						</div>
 
-						<div className="ml-6 p-4">
+						<div className="ml-6">
 
-							<Icon src={SearchIcon} />
+							<Icon
+								src={SearchIcon}
+								height={24}
+								width={24}
+							/>
 
 						</div>
 

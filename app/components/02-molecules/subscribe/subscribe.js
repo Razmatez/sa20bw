@@ -19,7 +19,7 @@ const Subscribe = () => {
 			<div className="flex">
 
 				<Input
-					helperText={<>By subscribing you agree to with our <a className="ml-1 font-mediu hover:underline text-gray-500" href="/forms">Terms of use</a>.</>}
+					helperText={<>By subscribing you agree to with our <a className="ml-1 font-medium hover:underline text-gray-500" href="/forms">Terms of use</a>.</>}
 					placeholder="Enter your email"
 
 				/>

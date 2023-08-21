@@ -101,12 +101,17 @@
 		font-size: 11px;
 	}
 
-}
-
-/* Override default styles */
-
-@media (min-width: 768px) {
-	.md\:space-x-8> :not([hidden])~ :not([hidden]) {
-		margin: 0 !important;
+	/* Button */
+	.button-base {
+		@apply font-barlow text-base uppercase;
+		letter-spacing: 0.04em;
 	}
+
+	.button-sm {
+		@apply font-barlow uppercase;
+		font-size: 14px;
+		line-height: 18px;
+		letter-spacing: 0.04em;
+	}
+
 }

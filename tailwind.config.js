@@ -28,8 +28,8 @@ module.exports = {
 				electricBlue: "#00A0FF",
 				red: "#BE0010",
 				magenta: "#FD00BE",
-
-				purple: "#231A51"
+				purple: "#231A51",
+				divider: "#B6B3C5"
 
 			},
 			fontFamily: {
