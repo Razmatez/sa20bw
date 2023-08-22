@@ -1,5 +1,7 @@
 'use client'
 
+import Footer from "@/app/components/03-organisms/footer/footer";
+import Navbar from "@/app/components/03-organisms/navbar/navbar";
 import { useEffect, useState } from "react";
 
 export default function Page({ params }: { params: { slug: string } }) {
@@ -18,6 +20,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
     return (
         <div>
+            <Navbar />
             {/* Display the fetched data */}
             <div className="bg-gray-100">
                 <div className="container mx-auto flex flex-col items-center py-12 sm:py-24">
@@ -37,6 +40,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             {data &&
                 <div className="container mx-auto mt-4" dangerouslySetInnerHTML={{__html: data.data.article.content[0].content}} />
             }
+            <Footer/>
         </div>
     );
 }
