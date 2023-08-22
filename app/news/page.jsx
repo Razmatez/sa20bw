@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import RootLayout from "../layout";
-import Navbar from "../components/03-organisms/navbar/navbar";
-import Footer from "../components/03-organisms/footer/footer";
+import Navbar from "../../components/03-organisms/navbar/navbar";
+import Footer from "../../components/03-organisms/footer/footer";
 
 export default function Page() {
     const [data, setData] = useState(null);

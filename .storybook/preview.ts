@@ -1,5 +1,5 @@
 import { withThemeByClassName } from "@storybook/addon-styling";
-import '../app/styles/globals.css';
+import '../styles/globals.css';
 
 export const decorators = [
   // Adds theme switching support.

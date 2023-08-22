@@ -1,16 +1,16 @@
 'use client'
 
-import Footer from "@/app/components/03-organisms/footer/footer";
-import Navbar from "@/app/components/03-organisms/navbar/navbar";
+import Footer from "@/components/03-organisms/footer/footer";
+import Navbar from "@/components/03-organisms/navbar/navbar";
 import { useEffect, useState } from "react";
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default function Page({ params }) {
     const [data, setData] = useState(null);
     const slug = params.slug;
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch("https://stage-article-cms-api.incrowdsports.com/v2/articles/slug/" + params.slug + "?clientId=SA20");
+            const response = await fetch("https://stage-article-cms-api.incrowdsports.com/v2/articles/slug/" + slug + "?clientId=SA20");
             const data = await response.json();
             setData(data);
         };
