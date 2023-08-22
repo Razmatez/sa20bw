@@ -1,16 +1,16 @@
 "use client";
-import { Label, TextInput, Flowbite } from "flowbite-react";
-import { HiMail } from 'react-icons/hi';
+import { Flowbite, Label, TextInput } from "flowbite-react";
+import { HiMail } from "react-icons/hi";
 
 const Input = (props) => {
 
 	const {
-		helperText,
-		id,
 		label,
+		id,
 		placeholder,
 		required,
-		type
+		type,
+		helperText
 	} = props;
 
 	const customTheme = {
@@ -24,11 +24,10 @@ const Input = (props) => {
 				}
 			}
 		}
-
 	}
 
-
 	return (
+
 		<Flowbite theme={{ theme: customTheme }} >
 
 			<div>
@@ -47,16 +46,16 @@ const Input = (props) => {
 				)}
 
 				<TextInput
-					className="rounded-sm"
-					helperText={helperText}
+					icon={HiMail}
 					id={id}
 					placeholder={placeholder}
 					required={required}
 					type={type}
-					icon={HiMail}
+					helperText={helperText}
 				/>
 
 			</div>
+
 		</Flowbite >
 
 	)

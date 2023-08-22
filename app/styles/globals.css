@@ -101,4 +101,17 @@
 		font-size: 11px;
 	}
 
+	/* Button */
+	.button-base {
+		@apply font-barlow text-base uppercase;
+		letter-spacing: 0.04em;
+	}
+
+	.button-sm {
+		@apply font-barlow uppercase;
+		font-size: 14px;
+		line-height: 18px;
+		letter-spacing: 0.04em;
+	}
+
 }
