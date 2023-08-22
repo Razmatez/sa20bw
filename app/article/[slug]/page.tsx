@@ -2,12 +2,13 @@
 
 import { useEffect, useState } from "react";
 
-export default function Page() {
+export default function Page({ params }: { params: { slug: string } }) {
     const [data, setData] = useState(null);
+    const slug = params.slug;
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch("https://stage-article-cms-api.incrowdsports.com/v2/articles/slug/paarl-royals-van-buuren-to-lead-sa-emerging-xi-2?clientId=SA20");
+            const response = await fetch("https://stage-article-cms-api.incrowdsports.com/v2/articles/slug/" + params.slug + "?clientId=SA20");
             const data = await response.json();
             setData(data);
         };
