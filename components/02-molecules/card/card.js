@@ -18,7 +18,6 @@ const Card = (props) => {
 		"slug": "paarl-royals-van-buuren-to-lead-sa-emerging-xi-2",
 		"publishDate": "2023-08-23T08:06:35.722Z",
 		"heroMedia": {
-			"category": "HIGHLIGHTS",
 			"title": "PAARL ROYALS’ VAN BUUREN TO LEAD SA EMERGING XI",
 			"content": {
 				"id": "d3ab0ba1-2885-4ae5-bcdb-23ae5fa167cd",
@@ -76,10 +75,10 @@ const Card = (props) => {
 
 			<div className="p-4">
 
-				{content.heroMedia.category && (
+				{content.displayCategory.text && (
 
 					<div className="label-base">
-						{content.heroMedia.category}
+						{content.displayCategory.text.toUpperCase()}
 					</div>
 
 				)}
