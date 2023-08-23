@@ -2,6 +2,7 @@
 
 import Footer from "@/components/03-organisms/footer/footer";
 import Navbar from "@/components/03-organisms/navbar/navbar";
+
 import { useEffect, useState } from "react";
 
 export default function Page({ params }) {
