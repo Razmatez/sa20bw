@@ -65,7 +65,7 @@ const Navbar = () => {
 
 				{/* Secondary menu */}
 
-				<div className="flex items-center justify-end w-full h-12 pr-16 bg-purple">
+				<div className="flex items-center justify-end w-full h-12 pr-16 bg-darkBlue90">
 
 					<ItemLink
 						className="mr-6 px-4 py-3 text-lightGrey"
@@ -74,7 +74,7 @@ const Navbar = () => {
 						TICKETS
 					</ItemLink>
 
-					<div className="w-px h-6 bg-divider" />
+					<div className="w-px h-6 bg-darkBlue30" />
 
 					<ItemLink
 						className="mx-6 pl-3 pr-4 text-lightGrey"

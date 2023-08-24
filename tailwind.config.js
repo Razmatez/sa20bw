@@ -9,6 +9,9 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			boxShadow: {
+				DEFAULT: "0px 1px 3px 1px rgba(0, 0, 0, 0.06), 0px 1px 2px 0px rgba(0, 0, 0, 0.2)"
+			},
 			colors: {
 				// Primary colors
 				darkBlue: "#0A003E",
@@ -29,9 +32,17 @@ module.exports = {
 				electricBlue: "#00A0FF",
 				red: "#BE0010",
 				magenta: "#FD00BE",
-				purple: "#231A51",
-				divider: "#B6B3C5"
 
+				// Dark blue shades
+				darkBlue90: "#231A51",
+				darkBlue80: "#3B3365",
+				darkBlue70: "#544D78",
+				darkBlue60: "#6C668B",
+				darkBlue50: "#85809F",
+				darkBlue40: "#9D99B2",
+				darkBlue30: "#B6B3C5",
+				darkBlue20: "#CECCD8",
+				darkBlue10: "#E7E6EC"
 			},
 			fontFamily: {
 				"barlow": ["Barlow Semi Condensed Bold", "sans-serif"],

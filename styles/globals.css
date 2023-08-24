@@ -24,7 +24,7 @@
 
 	/* Headings */
 	h1 {
-		@apply font-barlow text-h1 text-darkBlue
+		@apply font-barlow text-h1 text-darkBlue;
 	}
 
 	h2 {
@@ -66,49 +66,49 @@
 
 	/* Body Bold */
 	.body-xl-bold {
-		@apply font-rubik-medium body-xl;
+		@apply font-rubik-medium body-xl text-darkBlue;
 	}
 
 	.body-lg-bold {
-		@apply font-rubik-medium body-lg;
+		@apply font-rubik-medium body-lg text-darkBlue;
 	}
 
 	.body-base-bold {
-		@apply font-rubik-medium body-base;
+		@apply font-rubik-medium body-base text-darkBlue;
 	}
 
 	.body-sm-bold {
-		@apply font-rubik-medium body-sm;
+		@apply font-rubik-medium body-sm text-darkBlue;
 	}
 
 	.body-xs-bold {
-		@apply font-rubik-medium body-xs;
+		@apply font-rubik-medium body-xs text-darkBlue;
 	}
 
 	/* Label */
 	.label-lg {
-		@apply body-sm-bold;
+		@apply body-sm-bold text-darkBlue;
 		letter-spacing: 0.05em;
 	}
 
 	.label-base {
-		@apply body-xs-bold;
+		@apply body-xs-bold text-darkBlue;
 		letter-spacing: 0.05em;
 	}
 
 	.label-sm {
-		@apply label-base;
+		@apply label-base text-darkBlue;
 		font-size: 11px;
 	}
 
 	/* Button */
 	.button-base {
-		@apply font-barlow text-base uppercase;
+		@apply font-barlow text-base uppercase text-darkBlue;
 		letter-spacing: 0.04em;
 	}
 
 	.button-sm {
-		@apply font-barlow uppercase;
+		@apply font-barlow uppercase text-darkBlue;
 		font-size: 14px;
 		line-height: 18px;
 		letter-spacing: 0.04em;
