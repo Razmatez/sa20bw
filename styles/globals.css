@@ -114,4 +114,21 @@
 		letter-spacing: 0.04em;
 	}
 
+	/* Gradients */
+
+	.one {
+		background: linear-gradient(118.61deg, #00FFFF 0.44%, #0A003E 82.79%);
+	}
+
+	.two {
+		background: linear-gradient(118.61deg, #DAFF00 0.44%, #00FFFF 82.79%);
+	}
+
+	.three {
+		background: linear-gradient(118.61deg, #59FF26 0.44%, #DAFF00 82.79%);
+	}
+
+	.four {
+		background: linear-gradient(118.61deg, #00FFFF 0.44%, #59FF26 82.79%);
+	}
 }
