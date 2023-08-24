@@ -1,13 +1,18 @@
+import ResponsiveImage from "../../01-atoms/image/responsiveImage";
 
-const Hero = () => {
+const Hero = (props) => {
+
+	const {
+		heroMedia
+	} = props;
 
 	return (
 
-		<div className="h-[640px]">
+		<div className="relative h-[640px]">
 
-			<img
-				className="w-full h-full object-cover"
-				src="https://media-cdn.incrowdsports.com/0663bed6-91d3-40b6-9f1e-935bc6379dcb.png"
+			<ResponsiveImage
+				heroMedia={heroMedia}
+				styles="w-full h-full object-cover"
 			/>
 
 		</div>
