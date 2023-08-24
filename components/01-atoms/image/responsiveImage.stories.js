@@ -1,7 +1,7 @@
 import ResponsiveImage from "./responsiveImage";
 
 export default {
-	title: "Atoms/Image",
+	title: "Atoms/ResponsiveImage",
 	component: ResponsiveImage,
 };
 
