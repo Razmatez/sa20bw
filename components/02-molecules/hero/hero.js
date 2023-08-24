@@ -1,5 +1,5 @@
 
-const HeroSlide = () => {
+const Hero = () => {
 
 	return (
 
@@ -16,4 +16,4 @@ const HeroSlide = () => {
 
 }
 
-export default HeroSlide;
+export default Hero;
