@@ -1,35 +1,23 @@
 'use client'
 
-import Footer from "@/components/03-organisms/footer/footer";
-import Navbar from "@/components/03-organisms/navbar/navbar";
+async function fetchData(slug) {
+    const response = await fetch("https://stage-article-cms-api.incrowdsports.com/v2/articles/slug/" + slug + "?clientId=SA20");
+    return await response.json();
+};
 
-import { useEffect, useState } from "react";
-
-export default function Page({ params }) {
-    const [data, setData] = useState(null);
+export default async function Page({ params }) {
     const slug = params.slug;
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await fetch("https://stage-article-cms-api.incrowdsports.com/v2/articles/slug/" + slug + "?clientId=SA20");
-            const data = await response.json();
-            setData(data);
-        };
-
-        fetchData();
-    }, []);
-
+    const data = await fetchData(slug);
     return (
         <div>
-            <Navbar />
             {/* Display the fetched data */}
             <div className="bg-gray-100">
                 <div className="container mx-auto flex flex-col items-center py-12 sm:py-24">
                     <div className="w-11/12 sm:w-2/3 lg:flex justify-center items-center flex-col  mb-5 sm:mb-10">
-                        {data &&
-                            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-gray-800 font-black leading-7 md:leading-10">
-                                {data.data.article.heroMedia.title}
-                            </h1>}
+
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-gray-800 font-black leading-7 md:leading-10">
+                            {data.data.article.heroMedia.title}
+                        </h1>
                         <p className="mt-5 sm:mt-10 lg:w-10/12 text-gray-400 font-normal text-center text-sm sm:text-lg">A professonal website drives sales. Create a beautiful website to impress and engage new customers and establish your business online </p>
                     </div>
                     <div className="flex justify-center items-center">
@@ -38,10 +26,9 @@ export default function Page({ params }) {
                     </div>
                 </div>
             </div>
-            {data &&
-                <div className="container mx-auto mt-4" dangerouslySetInnerHTML={{__html: data.data.article.content[0].content}} />
-            }
-            <Footer/>
+
+            <div className="container mx-auto mt-4" dangerouslySetInnerHTML={{ __html: data.data.article.content[0].content }} />
+
         </div>
     );
 }
