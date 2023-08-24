@@ -1,16 +1,16 @@
 const Divider = (props) => {
 
-    const {
-        darkTheme = false
-    } = props;
+	const {
+		darkTheme = false
+	} = props;
 
-    const renderClassNames = darkTheme ? "bg-grey h-1" : "bg-black h-1";
+	const renderClassName = darkTheme ? "h-px bg-grey" : "h-px bg-darkGrey";
 
-    return (
+	return (
 
-        <hr className={renderClassNames} />
+		<hr className={renderClassName} />
 
-    )
+	)
 
 }
 
