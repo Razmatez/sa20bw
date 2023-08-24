@@ -22,7 +22,7 @@ module.exports = {
 				// Secondary colors
 				black: "#000000",
 				darkGrey: "#4D4D4D",
-				darkYellow: "#DAFF00",
+				darkYellow: "#FFB000",
 				yellow: "#FFFF00",
 				darkGreen: "#009426",
 				green: "#00FF00",

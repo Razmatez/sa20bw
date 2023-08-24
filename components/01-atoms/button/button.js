@@ -1,57 +1,47 @@
-"use client";
-import { Button as ButtonComponent, Flowbite } from "flowbite-react";
+import React from "react";
 
 const Button = (props) => {
 
-	const {
-		variant,
-		size = "md",
-		type = "button",
-		onClick
-	} = props;
+  const renderClassNames = () => {
 
-	const customTheme = {
-		button: {
-			base: "group flex h-min items-center justify-center p-0 text-center",
-			color: {
-				primary: "bg-darkBlue text-lightGrey",
-				secondary: "border-2 border-darkBlue bg-transparent text-darkBlue",
-				tertiary: "bg-transparent text-darkBlue",
-				blue: "bg-lightBlue text-darkBlue"
-			},
-			inner: {
-				base: "flex items-center",
-				outline: "border-0"
-			},
-			pill: {
-				off: "rounded-sm"
-			},
-			size: {
-				sm: "h-8 button-sm px-4",
-				md: "h-10 button-base px-4",
-				lg: "h-12 button-base px-4"
-			}
-		}
-	}
+    const { variant, size } = props; 
 
-	return (
+    let variantClassNames = "";
+    let sizeClassNames = "";
 
-		<Flowbite theme={{ theme: customTheme }}>
+    switch (variant) {
+      case "secondary": 
+        variantClassNames = "text-darkBlue uppercase bg-transparent rounded-md border-darkBlue border-2 border-solid hover:bg-darkBlue10";
+        break;
+      case "tertiary":
+        variantClassNames = "uppercase text-darkBlue";
+        break;
+      default: // primary
+        variantClassNames = "text-lightGrey uppercase bg-darkBlue hover:darkBlue90"; 
+    }
 
-			<ButtonComponent
-				color={variant}
-				size={size}
-				type={type}
-				onClick={onClick}
-			>
+    switch (size) {
+      case "sm":
+        sizeClassNames = "h-8 rounded-xl px-4 py-3 flex items-center justify-center ";
+        break;
+      case "lg":
+        sizeClassNames = "h-12 rounded-xl px-4 flex items-center justify-center ";
+        break;
+      default: // md 
+        sizeClassNames = "h-10 rounded-xl px-4 flex items-center justify-center "; 
+    }
 
-				{props.children}
+    return `${variantClassNames} ${sizeClassNames}`;
 
-			</ButtonComponent>
+  };
 
-		</Flowbite>
-	)
+  return (
 
-}
+    <button className={renderClassNames()}>
+      {props.children}
+    </button>
+
+  );
+};
 
 export default Button;
