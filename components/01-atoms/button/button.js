@@ -8,7 +8,6 @@ const Button = (props) => {
 
     let variantClassNames = "";
     let sizeClassNames = "";
-	let content = "";
 
     switch (variant) {
       case "secondary": 
@@ -39,7 +38,7 @@ const Button = (props) => {
   return (
 
     <button className={renderClassNames()}>
-      {props.content}
+      {props.children}
     </button>
 
   );

@@ -12,10 +12,11 @@ const CtaBanner = () => {
 			<p className="pb-6">Experience cricket like never before: access live matches, expert statistics , match highlights, and stay up to date with everything SA20</p>
 			
 			<Button
-			content="Join now"
 			size="lg"
 			variant=""
-			/>
+			>
+				Join Now
+			</Button >
 			
 			</div>
 		</div>
@@ -28,10 +29,11 @@ const CtaBanner = () => {
 			<p className="pb-6 text-grey text-center">Help us personalize your experience to recieve updates and communication based on your favourite team.</p>
 			<div className="flex justify-center">
 			<Button
-			content="choose my team"
 			size=""
 			variant=""
-			/>
+			>
+				choose my team
+			</Button >
 			
 			</div>
 			</div>
@@ -45,10 +47,10 @@ const CtaBanner = () => {
 			<p className="pb-6">Experience cricket like never before: access live matches, expert statistics , match highlights, and stay up to date with everything SA20</p>
 			
 			<Button
-			content="Vote now"
 			size="lg"
 			variant=""
 			>
+				Vote now
 			
 			</Button>
 			</div>
@@ -64,10 +66,11 @@ const CtaBanner = () => {
 			<p className="pb-6">Experience cricket like never before: access live matches, expert statistics , match highlights, and stay up to date with everything SA20</p>
 			
 			<Button
-			content="Join now"
 			size="lg"
 			variant=""
-			/>
+			>
+				Join now
+			</Button>
 			
 			</div>
 		</div>
@@ -79,10 +82,11 @@ const CtaBanner = () => {
 			<p className="pb-6">Experience cricket like never before: access live matches, expert statistics , match highlights, and stay up to date with everything SA20</p>
 			
 			<Button
-			content="Join now"
 			size="lg"
 			variant=""
-			/>
+			>
+				Join Now
+			</Button>
 			
 			</div>
 		</div>
