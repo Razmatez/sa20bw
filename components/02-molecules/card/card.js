@@ -4,6 +4,7 @@ import Divider from "../../01-atoms/divider/divider";
 import Icon from "../../01-atoms/icon/icon";
 import formatDate from "../../../utils/formatDate";
 import PlayIcon from "../../../assets/icons/card/play.svg";
+import ResponsiveImage from "../../01-atoms/image/responsiveImage";
 
 const Card = ({ content }) => {
   return (
@@ -13,10 +14,8 @@ const Card = ({ content }) => {
         href={content && "/news/" + content.slug}
       >
         <div className="relative h-[174px]">
-          <img
-            className="w-full h-full"
-            src={content.heroMedia.content.image || content.heroMedia.content.videoThumbnail}
-            alt={content.heroMedia.content.altText || "img"}
+          <ResponsiveImage
+            heroMedia={content.heroMedia}
           />
           {content.heroMedia.content.contentType === "VIDEO" && (
             <div className="absolute bottom-0 w-12 h-12 flex justify-center items-center bg-lightBlue rounded-tr-2xl">
