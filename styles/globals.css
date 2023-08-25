@@ -43,6 +43,14 @@
 		@apply font-barlow text-h5 text-darkBlue;
 	}
 
+	h6 {
+		@apply font-barlow text-h6 text-darkBlue;
+	}
+
+	.h7 {
+		@apply font-barlow text-h7 text-darkBlue;
+	}
+
 	/* Body */
 	.body-xl {
 		@apply font-rubik text-xl text-darkBlue;

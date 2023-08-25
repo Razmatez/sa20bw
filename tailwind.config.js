@@ -51,34 +51,42 @@ module.exports = {
 			},
 			fontSize: {
 				// Headings
-				h1: ["32px", {
-					lineHeight: "36px",
+				h1: ["56px", {
+					lineHeight: "68px",
 					letterSpacing: "0.015em"
 				  }],
-				h2: ["24px", {
+				h2: ["40px", {
+					lineHeight: "44px",
+					letterSpacing: "0.015em"
+				}],
+				h3: ["32px", {
+					lineHeight: "36px",
+					letterSpacing: "0.015em"
+				}],
+				h4: ["24px", {
 					lineHeight: "32px",
 					letterSpacing: "0.015em"
 				}],
-				h3: ["24px", {
+				h5: ["24px", {
 					lineHeight: "28px",
 					letterSpacing: "0.015em"
 				}],
-				h4: ["20px", {
+				h6: ["20px", {
 					lineHeight: "24px",
 					letterSpacing: "0.015em"
 				}],
-				h5: ["16px", {
+				h7: ["16px", {
 					lineHeight: "20px",
 					letterSpacing: "0.015em"
 				}],
 
 				// Body
 				xl: ["20px", {
-					lineHeight: "28px",
+					lineHeight: "32px",
 					letterSpacing: "0.015em"
 				}],
 				lg: ["18px", {
-					lineHeight: "24px",
+					lineHeight: "28px",
 					letterSpacing: "0.015em"
 				}],
 				base: ["16px", {
@@ -90,7 +98,7 @@ module.exports = {
 					letterSpacing: "0.005em"
 				}],
 				xs: ["12px", {
-					lineHeight: "16px",
+					lineHeight: "18px",
 					letterSpacing: "0.005em"
 				}],
 			}
