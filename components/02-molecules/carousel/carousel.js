@@ -22,74 +22,70 @@ const Carousel = (props) => {
 
 	return (
 
-		content[0].appearance.type === "CAROUSEL" && (
+		<div className="relative w-full h-full">
 
-			<div className="relative w-full h-full">
+			<Swiper
+				loop
+				modules={[ Navigation, Scrollbar, A11y ]}
+				navigation={{
+					nextEl: ".carousel-next",
+					prevEl: ".carousel-prev",
+				}}
+				scrollbar={{
+					draggable: false,
+					el: ".carousel-scrollbar"
+				}}
+			>
 
-				<Swiper
-					loop
-					modules={[ Navigation, Scrollbar, A11y ]}
-					navigation={{
-						nextEl: ".carousel-next",
-						prevEl: ".carousel-prev",
-					}}
-					scrollbar={{
-						draggable: false,
-						el: ".carousel-scrollbar"
-					}}
-				>
+				{content.map((slide, index) => (
 
-					{content[0].children.map((slide, index) => (
+					<SwiperSlide key={index}>
 
-						<SwiperSlide key={index}>
+						<Hero content={slide} />
 
-							<Hero content={slide} />
+					</SwiperSlide>
 
-						</SwiperSlide>
+				))}
 
-					))}
+				<div className="absolute bottom-8 flex justify-between items-center w-full px-16 z-10">
 
-					<div className="absolute bottom-8 flex justify-between items-center w-full px-16 z-10">
+					<div className="carousel-scrollbar" />
 
-						<div className="carousel-scrollbar" />
+					<div className="flex">
 
-						<div className="flex">
+						<button className="carousel-prev flex justify-center items-center w-10 h-10 bg-darkBlue80 rounded-xl mr-4">
 
-							<button className="carousel-prev flex justify-center items-center w-10 h-10 bg-darkBlue80 rounded-xl mr-4">
+							<div className="w-6 h-6">
 
-								<div className="w-6 h-6">
+								<Icon
+									src={ChevronLeftIcon}
+									altText="previous"
+								/>
 
-									<Icon
-										src={ChevronLeftIcon}
-										altText="previous"
-									/>
+							</div>
 
-								</div>
+						</button>
 
-							</button>
+						<button className="carousel-next flex justify-center items-center w-10 h-10 bg-darkBlue80 rounded-xl">
 
-							<button className="carousel-next flex justify-center items-center w-10 h-10 bg-darkBlue80 rounded-xl">
+							<div className="w-6 h-6">
 
-								<div className="w-6 h-6">
+								<Icon
+									src={ChevronRightIcon}
+									altText="next"
+								/>
 
-									<Icon
-										src={ChevronRightIcon}
-										altText="next"
-									/>
+							</div>
 
-								</div>
-
-							</button>
-
-						</div>
+						</button>
 
 					</div>
+
+				</div>
 
 	 		 </Swiper>
 
 	 	</div>
-
-		)
 
 	)
 
