@@ -1,98 +1,80 @@
 import Button from "@/components/01-atoms/button/button";
+import React from "react";
+
 
 const CtaBanner = () => {
 
+	const data = {
+		title: "Join the SA20 Family!",
+		description: "Experience cricket like never before: access live matches, expert statistics , match highlights, and stay up to date with everything SA20",
+		button: "Join now",
+		image: "https://media-cdn.incrowdsports.com/d7a0a698-aaab-4824-b4a2-7d062c76d445.png",
+		//category: "Poll",
+		//preHeader: "what is your",
+		width: " w-full"
+
+	}
+
 	return (
 
-		<fragment>
-		{/* Variation 1 with image*/}
-		<div className="bg-gradient-to-r from-lime to-lightBlue">
-			<div className="pt-12 pb-12 pl-16">	
-			<h2 className="pb-4">Join the SA20 Family!</h2>
-			<p className="pb-6">Experience cricket like never before: access live matches, expert statistics , match highlights, and stay up to date with everything SA20</p>
-			
-			<Button
-			size="lg"
-			variant=""
-			>
-				Join Now
-			</Button >
-			
-			</div>
-		</div>
+		<div>
 
-		 {/* Variation 2  centered*/}
-		
-		<div className="bg-darkBlue flex justify-center">
-			<div className="px-8 py-8">	
-			<h2 className="pb-4 text-white text-center">Which is your Favourite team ?</h2>
-			<p className="pb-6 text-grey text-center">Help us personalize your experience to recieve updates and communication based on your favourite team.</p>
-			<div className="flex justify-center">
-			<Button
-			size=""
-			variant=""
-			>
-				choose my team
-			</Button >
-			
-			</div>
-			</div>
-		</div>
+			<div className={data.image ? "bg-gradient-to-r from-lime to-lightBlue flex flex-col lg:flex-row" + data.width : "bg-darkBlue flex justify-center"}>
 
-		{/* Variation 3 with category and no paragraph*/}
-		<div className="bg-gradient-to-r from-lime to-lightBlue">
-			<div className="pt-12 pb-12 pl-16">	
-			<p>POLL</p>
-			<h2 className="pb-4">Who will claim the title of Betway SA20 Champion in Season 2</h2>
-			<p className="pb-6">Experience cricket like never before: access live matches, expert statistics , match highlights, and stay up to date with everything SA20</p>
-			
-			<Button
-			size="lg"
-			variant=""
-			>
-				Vote now
-			
-			</Button>
-			</div>
-		</div>
+				<div className={data.image ? "pt-12 pb-12 pl-16" : "px-8 py-8"}>
 
-		{/* variation 4 2 col layout */}
+					{data.category &&
+						<p className={data.image ? "" : "text-white"}>
+							{data.category}
+						</p>
+					}
 
-		<div className="flex flex-col lg:flex-row">
-			{/* Part 1 */}
-		<div className="bg-gradient-to-r from-lime to-lightBlue w-full lg:w-[50%]">
-			<div className="pt-12 pb-12 pl-16">	
-			<h2 className="pb-4">Join the SA20 Family!</h2>
-			<p className="pb-6">Experience cricket like never before: access live matches, expert statistics , match highlights, and stay up to date with everything SA20</p>
-			
-			<Button
-			size="lg"
-			variant=""
-			>
-				Join now
-			</Button>
-			
-			</div>
-		</div>
+					{data.preHeader ?
+						<div>
 
-		{/* part 2 */}
-		<div className="bg-gradient-to-r from-lime to-lightBlue w-full lg:w-[50%]">
-			<div className="pt-12 pb-12 pl-16">	
-			<h2 className="pb-4">Join the SA20 Family!</h2>
-			<p className="pb-6">Experience cricket like never before: access live matches, expert statistics , match highlights, and stay up to date with everything SA20</p>
-			
-			<Button
-			size="lg"
-			variant=""
-			>
-				Join Now
-			</Button>
-			
+							<p className="pb-4 text-white text-center">
+								{data.preHeader}
+							</p>
+
+							<div className="flex justify-center items-center">
+
+								<span className="pb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-lime to-brightGreen text-[50px] uppercase">
+									{data.title}
+								</span>
+
+							</div>
+
+						</div>
+						:
+						<h2 className={data.image ? "pb-4" : "text-white pb-4"}>
+							{data.title}
+						</h2>
+					}
+
+					<p className={data.image ? "pb-6" : "pb-6 text-grey text-center"}>
+						{data.description}
+					</p>
+
+					<div className={data.image ? "flex" : "flex justify-center"}>
+
+						<Button
+							size="lg"
+							variant={data.image ? "default" : "secondary"}
+						>
+							{data.button}
+						</Button>
+					</div>
+
+				</div>
+
+				{data.image &&
+					<img src={data.image} alt="Description of the image" />
+				}
+
 			</div>
-		</div>
-		</div>
-		</fragment>
-		
+
+		</div >
+
 	)
 }
 
