@@ -23,27 +23,33 @@
 	}
 
 	/* Headings */
-	h1 {
+	h1,
+	.h1 {
 		@apply font-barlow text-h1 text-darkBlue;
 	}
 
-	h2 {
+	h2,
+	.h2 {
 		@apply font-barlow text-h2 text-darkBlue;
 	}
 
-	h3 {
+	h3,
+	.h3 {
 		@apply font-barlow text-h3 text-darkBlue;
 	}
 
-	h4 {
+	h4,
+	.h4 {
 		@apply font-barlow text-h4 text-darkBlue;
 	}
 
-	h5 {
+	h5,
+	.h5 {
 		@apply font-barlow text-h5 text-darkBlue;
 	}
 
-	h6 {
+	h6,
+	.h6 {
 		@apply font-barlow text-h6 text-darkBlue;
 	}
 

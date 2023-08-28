@@ -26,7 +26,7 @@ const CtaBanner = (props) => {
 
 						<div className="flex justify-center items-center">
 
-							<span className="pb-4 text-center bg-clip-text text-transparent gradient-lime-to-green text-[56px] uppercase">
+							<span className="pb-4 text-center bg-clip-text text-transparent gradient-lime-to-green h1">
 								{data.title}
 							</span>
 
