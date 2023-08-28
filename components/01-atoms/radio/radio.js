@@ -1,40 +1,14 @@
-"use client";
-import { useState } from "react";
-import { Label, Radio as RadioComponent } from "flowbite-react";
+import React from "react";
 
 const Radio = (props) => {
+    const { id, label, type, style } = props;
 
-	const {
-		id,
-		label,
-		name,
-		value
-	} = props;
-
-	const [isChecked, setIsChecked] = useState(false);
-
-	const handleOnClick = () => setIsChecked(!isChecked);
-
-	return (
-
-		<div className="flex items-center gap-2">
-
-			<RadioComponent
-				checked={isChecked}
-				id={id}
-				name={name}
-				value={value}
-				onClick={handleOnClick}
-			/>
-
-			<Label htmlFor={id}>
-				{label}
-			</Label>
-
-		</div>
-
-	)
-
-}
+    return (
+        <div className="flex items-center gap-2">
+            <input type={type} className={style} id={id} name="radioOptions" value={id} />
+            <label className="font-rubik base text-darkBlue " htmlFor={id}>{label}</label>
+        </div>
+    );
+};
 
 export default Radio;
