@@ -23,27 +23,33 @@
 	}
 
 	/* Headings */
-	h1 {
+	h1,
+	.h1 {
 		@apply font-barlow text-h1 text-darkBlue;
 	}
 
-	h2 {
+	h2,
+	.h2 {
 		@apply font-barlow text-h2 text-darkBlue;
 	}
 
-	h3 {
+	h3,
+	.h3 {
 		@apply font-barlow text-h3 text-darkBlue;
 	}
 
-	h4 {
+	h4,
+	.h4 {
 		@apply font-barlow text-h4 text-darkBlue;
 	}
 
-	h5 {
+	h5,
+	.h5 {
 		@apply font-barlow text-h5 text-darkBlue;
 	}
 
-	h6 {
+	h6,
+	.h6 {
 		@apply font-barlow text-h6 text-darkBlue;
 	}
 
@@ -128,7 +134,7 @@
 		background: linear-gradient(118.61deg, #00FFFF 0.44%, #0A003E 82.79%);
 	}
 
-	.gradient-green-to-blue {
+	.gradient-blue-to-lime {
 		background: linear-gradient(118.61deg, #DAFF00 0.44%, #00FFFF 82.79%);
 	}
 
@@ -136,7 +142,7 @@
 		background: linear-gradient(118.61deg, #59FF26 0.44%, #DAFF00 82.79%);
 	}
 
-	.gradient-blue-to-lime {
+	.gradient-green-to-blue {
 		background: linear-gradient(118.61deg, #00FFFF 0.44%, #59FF26 82.79%);
 	}
 }
