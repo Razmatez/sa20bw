@@ -120,7 +120,7 @@
 		background: linear-gradient(118.61deg, #00FFFF 0.44%, #0A003E 82.79%);
 	}
 
-	.gradient-green-to-blue {
+	.gradient-blue-to-lime {
 		background: linear-gradient(118.61deg, #DAFF00 0.44%, #00FFFF 82.79%);
 	}
 
@@ -128,7 +128,7 @@
 		background: linear-gradient(118.61deg, #59FF26 0.44%, #DAFF00 82.79%);
 	}
 
-	.gradient-blue-to-lime {
+	.gradient-green-to-blue {
 		background: linear-gradient(118.61deg, #00FFFF 0.44%, #59FF26 82.79%);
 	}
 }
