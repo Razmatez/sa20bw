@@ -1,23 +1,31 @@
 import React from "react";
 
+
+import Icon from "../../01-atoms/icon/icon";
+
+import AddIcon from "../../../assets/icons/button/add.svg";
+
 const Button = (props) => {
 
   const renderClassNames = () => {
 
-    const { variant, size } = props; 
+    const { variant, size } = props;
 
     let variantClassNames = "";
     let sizeClassNames = "";
 
     switch (variant) {
-      case "secondary": 
-        variantClassNames = "text-darkBlue uppercase bg-transparent rounded-md border-darkBlue border-2 border-solid hover:bg-darkBlue10";
+      case "secondary":
+        variantClassNames = "font-barlow base text-darkBlue uppercase bg-transparent rounded-md border-darkBlue border-2 border-solid hover:bg-darkBlue10";
         break;
       case "tertiary":
-        variantClassNames = "uppercase text-darkBlue";
+        variantClassNames = "font-barlow uppercase text-darkBlue base";
+        break;
+      case "blue":
+        variantClassNames = "font-barlow uppercase bg-lightBlue text-darkBlue base";
         break;
       default: // primary
-        variantClassNames = "text-lightGrey uppercase bg-darkBlue hover:darkBlue90"; 
+        variantClassNames = "font-barlow text-lightGrey uppercase bg-darkBlue hover:darkBlue90 base";
     }
 
     switch (size) {
@@ -28,7 +36,7 @@ const Button = (props) => {
         sizeClassNames = "h-12 rounded-xl px-4 flex items-center justify-center ";
         break;
       default: // md 
-        sizeClassNames = "h-10 rounded-xl px-4 flex items-center justify-center "; 
+        sizeClassNames = "h-10 rounded-xl px-4 flex items-center justify-center ";
     }
 
     return `${variantClassNames} ${sizeClassNames}`;
@@ -38,7 +46,9 @@ const Button = (props) => {
   return (
 
     <button className={renderClassNames()}>
+
       {props.children}
+
     </button>
 
   );
