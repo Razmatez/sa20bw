@@ -1,8 +1,9 @@
-import Button from "@/components/01-atoms/button/button";
+// import Button from "../../components/01-atoms/button/button";
+import Button from "../../01-atoms/button/button"
 
 const CtaBanner = (props) => {
 
-	const { ...data } = props;
+	const { data } = props;
 
 	return (
 
