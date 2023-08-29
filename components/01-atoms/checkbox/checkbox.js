@@ -23,7 +23,7 @@ const Checkbox = (props) => {
 				onChange={handleOnChange}
 			/>
 
-			<label className={disabled ? "text-darkBlue30 cursor-not-allowed body-base" : "body-base"}
+			<label className={disabled ? "cursor-not-allowed body-base text-darkBlue30" : "body-base"}
 				for={id}>
 				{label}
 			</label>
