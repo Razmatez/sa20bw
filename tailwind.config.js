@@ -18,7 +18,6 @@ module.exports = {
 				lightBlue: "#00FFFF",
 				lime: "#DAFF00",
 				brightGreen: "#59FF26",
-				disabledGrey: "#B6B3C5",
 
 				// Secondary colors
 				black: "#000000",

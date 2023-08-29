@@ -1,19 +1,19 @@
 import React from "react";
 
 const Radio = (props) => {
-    const { id, label, type, style, disabled, disabledStyle } = props;
-
+    const { disabled, id, label, type, value } = props;
     return (
         <div className="flex items-center gap-2">
 
             <input
-                type={type}
-                className={disabled ? disabledStyle : style}
-                id={id}
+                className={disabled ? "cursor-not-allowed border-grey bg-lightGrey" : "checked:bg-darkBlue focus:outline-none focus:ring focus:ring-transparent border-grey hover:border-darkBlue"}
                 disabled={disabled}
+                id={id}
+                type={type}
+                value={value}
             />
 
-            <label className={disabled ? "text-disabledGrey cursor-not-allowed base" : "font-rubik base text-darkBlue"}
+            <label className={disabled ? "text-darkBlue30 cursor-not-allowed body-base" : "body-base"}
                 for={id}>
                 {label}
             </label>

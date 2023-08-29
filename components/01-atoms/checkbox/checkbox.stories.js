@@ -13,9 +13,8 @@ export const Default = {
 		id: "",
 		label: "Checkbox label",
 		type: "checkbox",
-		style: "checked:bg-darkBlue rounded-sm focus:outline-none focus:ring focus:ring-transparent border-grey hover:border-darkBlue rubik",
 		value: "",
 		disabled: true,
-		disabledStyle: "cursor-not-allowed border-grey bg-lightGrey rubik rounded-sm"
+
 	},
 };
