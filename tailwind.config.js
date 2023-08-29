@@ -54,7 +54,7 @@ module.exports = {
 				h1: ["56px", {
 					lineHeight: "68px",
 					letterSpacing: "0.015em"
-				  }],
+				}],
 				h2: ["40px", {
 					lineHeight: "44px",
 					letterSpacing: "0.015em"

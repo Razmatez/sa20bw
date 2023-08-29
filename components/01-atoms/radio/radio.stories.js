@@ -1,17 +1,20 @@
 import Radio from "./radio";
 
 export default {
-	title: "Atoms/Radio",
-	component: Radio,
-	argTypes: {},
+    title: "Atoms/Radio",
+    component: Radio,
+    argTypes: {},
 };
 
 export const Default = {
-	name: "Radio",
-	args: {
-		id: "",
-		label: "Radio label",
-		name: "",
-		value: ""
-	}
-}
+    name: "Radio",
+    component: Radio,
+    args: {
+        disabled: true,
+        id: "",
+        label: "Radio label",
+        type: "radio",
+        value: ""
+
+    },
+};

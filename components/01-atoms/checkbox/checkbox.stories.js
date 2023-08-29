@@ -1,6 +1,3 @@
-/**
- * Storybook Definition.
- */
 import Checkbox from "./checkbox";
 
 export default {
@@ -11,8 +8,13 @@ export default {
 
 export const Default = {
 	name: "Checkbox",
+	component: Checkbox,
 	args: {
 		id: "",
 		label: "Checkbox label",
+		type: "checkbox",
+		value: "",
+		disabled: true,
+
 	},
 };

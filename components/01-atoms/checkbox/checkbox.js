@@ -1,35 +1,35 @@
-"use client";
-import { useState } from "react";
-import { Checkbox as CheckboxComponent, Label } from "flowbite-react";
+import React, { useState } from "react";
 
 const Checkbox = (props) => {
-
-	const {
-		id,
-		label
-	} = props;
-
+	const { disabled, id, label, type, value } = props;
 	const [isChecked, setIsChecked] = useState(false);
 
-	const handleOnChange = () => setIsChecked(!isChecked);
+	const handleOnChange = () => {
+		if (!disabled) {
+			setIsChecked(!isChecked);
+		}
+	};
 
 	return (
-
 		<div className="flex items-center gap-2">
 
-			<CheckboxComponent
+			<input
 				checked={isChecked}
+				className={disabled ? "cursor-not-allowed border-grey bg-lightGrey rounded-sm" : "checked:bg-darkBlue rounded-sm focus:outline-none focus:ring focus:ring-transparent border-grey hover:border-darkBlue"}
+				disabled={disabled}
 				id={id}
+				type={type}
+				value={value}
 				onChange={handleOnChange}
 			/>
 
-			<Label htmlFor={id}>
+			<label className={disabled ? "cursor-not-allowed body-base text-darkBlue30" : "body-base"}
+				for={id}>
 				{label}
-			</Label>
+			</label>
 
 		</div>
-
-	)
-}
+	);
+};
 
 export default Checkbox;

@@ -4,31 +4,34 @@ const Button = (props) => {
 
   const renderClassNames = () => {
 
-    const { variant, size } = props; 
+    const { variant, size } = props;
 
     let variantClassNames = "";
     let sizeClassNames = "";
 
     switch (variant) {
-      case "secondary": 
-        variantClassNames = "text-darkBlue uppercase bg-transparent rounded-md border-darkBlue border-2 border-solid hover:bg-darkBlue10";
+      case "secondary":
+        variantClassNames = "bg-transparent rounded-md border-darkBlue border-2 border-solid hover:bg-darkBlue10";
         break;
       case "tertiary":
-        variantClassNames = "uppercase text-darkBlue";
+        variantClassNames = "";
+        break;
+      case "blue":
+        variantClassNames = "bg-lightBlue";
         break;
       default: // primary
-        variantClassNames = "text-lightGrey uppercase bg-darkBlue hover:darkBlue90"; 
+        variantClassNames = "text-lightGrey bg-darkBlue hover:darkBlue90";
     }
 
     switch (size) {
       case "sm":
-        sizeClassNames = "h-8 rounded-xl px-4 py-3 flex items-center justify-center ";
+        sizeClassNames = "button-sm h-8 rounded-xl px-4 py-3 flex items-center justify-center ";
         break;
       case "lg":
-        sizeClassNames = "h-12 rounded-xl px-4 flex items-center justify-center ";
+        sizeClassNames = "button-base h-12 rounded-xl px-4 flex items-center justify-center ";
         break;
       default: // md 
-        sizeClassNames = "h-10 rounded-xl px-4 flex items-center justify-center "; 
+        sizeClassNames = "button-base h-10 rounded-xl px-4 flex items-center justify-center ";
     }
 
     return `${variantClassNames} ${sizeClassNames}`;
@@ -38,7 +41,9 @@ const Button = (props) => {
   return (
 
     <button className={renderClassNames()}>
+
       {props.children}
+
     </button>
 
   );
