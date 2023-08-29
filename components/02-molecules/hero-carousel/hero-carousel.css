@@ -1,0 +1,12 @@
+.hero-carousel-scrollbar {
+	@apply h-1 rounded-sm;
+	width: 300px;
+}
+
+.hero-carousel-scrollbar {
+	@apply bg-lightGrey/[.15];
+}
+
+.hero-carousel-scrollbar>.swiper-scrollbar-drag {
+	@apply bg-lightBlue rounded-sm;
+}

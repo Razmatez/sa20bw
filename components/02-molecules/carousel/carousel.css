@@ -1,9 +1,0 @@
-.carousel-scrollbar {
-	@apply bg-lightGrey/[.15] rounded-sm;
-	width: 300px;
-	height: 4px;
-}
-
-.carousel-scrollbar>.swiper-scrollbar-drag {
-	@apply bg-lightBlue rounded-sm;
-}

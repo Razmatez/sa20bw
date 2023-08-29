@@ -101,6 +101,12 @@ module.exports = {
 					lineHeight: "18px",
 					letterSpacing: "0.005em"
 				}],
+			},
+			spacing: {
+				15: "60px",
+				16: "64px",
+				17: "68px",
+				18: "72px"
 			}
 		}
 	},
