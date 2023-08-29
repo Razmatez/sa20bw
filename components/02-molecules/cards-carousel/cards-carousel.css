@@ -1,0 +1,20 @@
+.cards-carousel .swiper {
+	@apply p-1;
+}
+
+.cards-carousel .swiper-button-disabled img {
+	opacity: 0.2;
+}
+
+.cards-carousel-scrollbar {
+	@apply h-1 rounded-sm;
+	width: 300px;
+}
+
+.cards-carousel-scrollbar {
+	@apply bg-lightGrey;
+}
+
+.cards-carousel-scrollbar>.swiper-scrollbar-drag {
+	@apply bg-darkBlue rounded-sm;
+}
