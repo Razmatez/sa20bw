@@ -18,6 +18,7 @@ module.exports = {
 				lightBlue: "#00FFFF",
 				lime: "#DAFF00",
 				brightGreen: "#59FF26",
+				disabledGrey: "#B6B3C5",
 
 				// Secondary colors
 				black: "#000000",
@@ -54,7 +55,7 @@ module.exports = {
 				h1: ["56px", {
 					lineHeight: "68px",
 					letterSpacing: "0.015em"
-				  }],
+				}],
 				h2: ["40px", {
 					lineHeight: "44px",
 					letterSpacing: "0.015em"

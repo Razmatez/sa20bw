@@ -14,5 +14,7 @@ export const Default = {
         label: "Radio label",
         type: "radio",
         style: "checked:bg-darkBlue focus:outline-none focus:ring focus:ring-transparent border-grey hover:border-darkBlue",
+        disabled: true,
+        disabledStyle: "cursor-not-allowed border-grey bg-lightGrey rubik"
     },
 };
