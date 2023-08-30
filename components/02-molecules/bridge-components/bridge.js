@@ -26,7 +26,7 @@ const Bridge = ({ content }) => {
                 </div>
             )
         case "VIDEO":
-            return (<Video width={640} height={480} src={content.link} />);
+            return (<Video width={640} height={480} videoUrl={content.link} />);
         case "FORM":
             return (<IncrowdForm content={content} />);
         case "LIVE_BLOG":

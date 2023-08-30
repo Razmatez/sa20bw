@@ -8,11 +8,11 @@ const IncrowdForm = (props) => {
         <>
             <incrowd-forms
                 id={content.formId}
-                client-id="SA20"
+                client-id={process.env.NEXT_PUBLIC_CLIENT_ID}
                 server="standard"
             ></incrowd-forms>
             <script
-                src="https://forms-stage.incrowdsports.com/js/index.js">
+                src={process.env.NEXT_PUBLIC_FORMS_SCRIPT_URL}>
             </script>
         </>
 

@@ -8,12 +8,12 @@ const Poll = (props) => {
         <>
             <incrowd-poll
                 id={content.pollId}
-                client-id="SA20"
+                client-id={process.env.NEXT_PUBLIC_CLIENT_ID}
                 server="standard"
             ></incrowd-poll>
             <script
                 type="text/javascript"
-                src="https://polls-stage.incrowdsports.com/js/index.js"
+                src={process.env.NEXT_PUBLIC_POLLS_SCRIPT_URL}
             ></script>
         </>
 

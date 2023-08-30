@@ -8,12 +8,11 @@ const IncrowdLiveBlog = (props) => {
         <>
             <incrowd-live-blog
                 id={content.sourceSystemId}
-                client-id="SA20"
+                client-id={process.env.NEXT_PUBLIC_CLIENT_ID}
                 server="standard"
-                stage></incrowd-live-blog>
+                stage={process.env.NEXT_PUBLIC_ENVIRONMENT = 'stage' ? true : false}></incrowd-live-blog>
             <script
-                src="https://live-blog.incrowdsports.com/index.js">
-
+                src={process.env.NEXT_PUBLIC_LIVEBLOG_SCRIPT_URL}>
             </script>
         </>
 
