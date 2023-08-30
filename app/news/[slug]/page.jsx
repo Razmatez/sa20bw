@@ -3,7 +3,7 @@
 import Bridge from '../../../components/02-molecules/bridge-components/bridge';
 
 async function fetchData(slug) {
-    const response = await fetch("https://stage-article-cms-api.incrowdsports.com/v2/articles/slug/" + slug + "?clientId=SA20");
+    const response = await fetch(process.env.NEXT_PUBLIC_ARTICLE_BASE_URL + "/v2/articles/slug/" + slug + "?clientId=" + process.env.NEXT_PUBLIC_CLIENT_ID);
     return await response.json();
 };
 

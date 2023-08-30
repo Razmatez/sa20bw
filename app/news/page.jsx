@@ -3,7 +3,7 @@
 import Card from "../../components/02-molecules/card/card";
 
 async function fetchArticles() {
-    const response = await fetch("https://stage-article-cms-api.incrowdsports.com/v2/articles?clientId=SA20", { cache: "force-cache" });
+    const response = await fetch(process.env.NEXT_PUBLIC_ARTICLE_BASE_URL + "/v2/articles?clientId=" + process.env.NEXT_PUBLIC_CLIENT_ID, { cache: "force-cache" });
     return response.json();
 }
 
