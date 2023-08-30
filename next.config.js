@@ -5,7 +5,17 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
-  output: 'export',
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'media-cdn.incrowdsports.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
+  // output: 'export',
 }
 
 module.exports = nextConfig
