@@ -1,5 +1,7 @@
 'use client'
 
+import Bridge from '../../../components/02-molecules/bridge-components/bridge';
+
 async function fetchData(slug) {
     const response = await fetch("https://stage-article-cms-api.incrowdsports.com/v2/articles/slug/" + slug + "?clientId=SA20");
     return await response.json();
@@ -8,9 +10,9 @@ async function fetchData(slug) {
 export default async function Page({ params }) {
     const slug = params.slug;
     const data = await fetchData(slug);
+
     return (
         <div>
-            {/* Display the fetched data */}
             <div className="bg-gray-100">
                 <div className="container mx-auto flex flex-col items-center py-12 sm:py-24">
                     <div className="w-11/12 sm:w-2/3 lg:flex justify-center items-center flex-col  mb-5 sm:mb-10">
@@ -26,9 +28,13 @@ export default async function Page({ params }) {
                     </div>
                 </div>
             </div>
-
-            <div className="container mx-auto mt-4" dangerouslySetInnerHTML={{ __html: data.data.article.content[0].content }} />
-
+            <div className="container mx-auto mt-4">
+                {
+                    data.data.article.content.map((content) =>
+                        < Bridge key={content.id} content={content} />
+                    )
+                }
+            </div>
         </div>
     );
 }
