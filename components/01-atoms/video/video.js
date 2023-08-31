@@ -7,7 +7,7 @@ const Video = ({ videoUrl, width, height }) => {
 			width={width}
 			height={height}
 			src={videoUrl}
-			allowfullscreen>
+			allowFullScreen>
 
 		</iframe>
 
