@@ -1,10 +1,10 @@
 const Text = (props) => {
 
-	const { content } = props;
+	const { content, className } = props;
 
 	return (
 
-		<p>
+		<p className={`${className}`}>
 
 			{content}
 

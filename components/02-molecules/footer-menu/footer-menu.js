@@ -1,8 +1,10 @@
-import { Footer } from 'flowbite-react';
+import React, { useState, useEffect } from 'react';
+import Chevron from "../../../assets/icons/chevron/chevron-down-white.svg"
+import Image from "next/image";
 
 const footerSections = [
     {
-        title: "Useful Links",
+        title: "SA 20 Cricket",
         links: [
             { url: "#", text: "About SA20" },
             { url: "#", text: "Matches" },
@@ -34,7 +36,7 @@ const footerSections = [
         ],
     },
     {
-        title: "Contact",
+        title: "Fun & More",
         links: [
             { url: "#", text: "Contact Us" },
             { url: "#", text: "FAQs" },
@@ -44,36 +46,75 @@ const footerSections = [
 ];
 
 const FooterMenu = () => {
+    const [expandedSections, setExpandedSections] = useState({});
+
+    useEffect(() => {
+        const handleResize = () => {
+            const newExpandedSections = {};
+            footerSections.forEach((section, index) => {
+                newExpandedSections[index] = window.innerWidth >= 640; // Set to false for mobile by default
+            });
+            setExpandedSections(newExpandedSections);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const toggleSection = (index) => {
+        setExpandedSections((prevExpanded) => {
+            const isExpanded = !prevExpanded[index];
+            const newExpandedSections = { ...prevExpanded };
+            newExpandedSections[index] = isExpanded;
+            return newExpandedSections;
+        });
+    };
+
     return (
-        <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-4 sm:gap-4">
+        <div className="pt-8 px-5 pb-8 md:py-16 md:pr-16">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                {footerSections.map((section, index) => (
+                    <div className="" key={index}>
+                        <button
+                            className="text-lightGrey h7 pb-6 md:h6 md:text-lightGrey flex items-center justify-between w-full"
+                            onClick={() => toggleSection(index)}
+                            style={{
+                                cursor: window.innerWidth >= 640 ? 'default' : 'pointer',
+                            }}
+                        >
+                            <div>{section.title}</div>
+                            <Image
+                                src={Chevron}
+                                alt="logo"
+                                style={{
+                                    display: window.innerWidth < 640 ? 'inline-block' : 'none',
+                                    transform: `rotate(${expandedSections[index] ? 180 : 0}deg)`,
+                                    transition: 'transform 0.3s ease-in-out',
+                                }}
+                            />
 
-            {footerSections.map((section, index) => (
+                        </button>
 
-                <div key={index}>
-
-                    <Footer.Title title={section.title} />
-
-                    <Footer.LinkGroup col>
-
-                        {section.links.map((link, linkIndex) => (
-
-                            <Footer.Link key={linkIndex} href={link.url}>
-
-                                {link.text}
-
-                            </Footer.Link>
-
-                        ))}
-
-                    </Footer.LinkGroup>
-
-                </div>
-            ))}
-
+                        {(expandedSections[index] || window.innerWidth >= 640) && (
+                            <div>
+                                <ul className="list-inside">
+                                    {section.links.map((link, linkIndex) => (
+                                        <li key={linkIndex} className="mb-1 button-sm text-grey pb-4">
+                                            <a href={link.url}>{link.text}</a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </div>
         </div>
-
-
-    )
-}
+    );
+};
 
 export default FooterMenu;
