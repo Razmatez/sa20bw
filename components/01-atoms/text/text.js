@@ -1,6 +1,6 @@
 const Text = (props) => {
 
-	const { content, className } = props;
+	const { content } = props;
 
 	return (
 		<div dangerouslySetInnerHTML={{ __html: content }} />

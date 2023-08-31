@@ -12,10 +12,7 @@ const Subscribe = () => {
 
 			<div className="pb-6 pt-10">
 
-				<Text
-					content="Subscribe"
-					className={'text-grey text-h4'}
-				/>
+				<h6 className="text-lightGrey">Subscribe</h6>
 
 			</div>
 

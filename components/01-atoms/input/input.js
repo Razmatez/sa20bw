@@ -12,16 +12,13 @@ const Input = (props) => {
 
 	return (
 
-		<div class="mb-4 flex">
-			<input
-				class="rounded-lg"
-				id={id}
-				label={label}
-				placeholder={placeholder}
-				type={type}
-			/>
-
-		</div >
+		<input
+			className="rounded-lg"
+			id={id}
+			label={label}
+			placeholder={placeholder}
+			type={type}
+		/>
 
 	)
 
