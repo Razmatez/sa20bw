@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import Chevron from "../../../assets/icons/chevron/chevron-down-white.svg"
 import Image from "next/image";
 
@@ -46,15 +47,17 @@ const footerSections = [
 ];
 
 const FooterMenu = () => {
+
     const [expandedSections, setExpandedSections] = useState({});
 
     useEffect(() => {
         const handleResize = () => {
             const newExpandedSections = {};
             footerSections.forEach((section, index) => {
-                newExpandedSections[index] = window.innerWidth >= 640; // Set to false for mobile by default
+                newExpandedSections[index] = window.innerWidth >= 640;
             });
             setExpandedSections(newExpandedSections);
+
         };
 
         handleResize();
@@ -76,9 +79,12 @@ const FooterMenu = () => {
 
     return (
         <div className="pt-8 px-5 pb-8 md:py-16 md:pr-16">
+
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+
                 {footerSections.map((section, index) => (
                     <div className="" key={index}>
+
                         <button
                             className="text-lightGrey h7 pb-6 md:h6 md:text-lightGrey flex items-center justify-between w-full"
                             onClick={() => toggleSection(index)}
@@ -87,6 +93,7 @@ const FooterMenu = () => {
                             }}
                         >
                             <div>{section.title}</div>
+
                             <Image
                                 src={Chevron}
                                 alt="logo"
@@ -101,10 +108,15 @@ const FooterMenu = () => {
 
                         {(expandedSections[index] || window.innerWidth >= 640) && (
                             <div>
+
                                 <ul className="list-inside">
+
                                     {section.links.map((link, linkIndex) => (
+
                                         <li key={linkIndex} className="mb-1 button-sm text-grey pb-4">
+
                                             <a href={link.url}>{link.text}</a>
+
                                         </li>
                                     ))}
                                 </ul>

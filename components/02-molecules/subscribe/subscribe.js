@@ -1,5 +1,6 @@
 
 import Text from "../../01-atoms/text/text";
+
 import Chevron from "../../../assets/icons/chevron/chevron-right-dark.svg"
 import Image from "next/image";
 
@@ -30,7 +31,6 @@ const Subscribe = () => {
 					<Image
 						src={Chevron}
 						alt="logo"
-
 					/>
 				</button>
 			</div >
