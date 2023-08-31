@@ -20,7 +20,6 @@ export const Default = {
 	args: {
 		id: "",
 		placeholder: "name@email.com",
-		required: true,
 		icon: HiMail,
 		helperText: ""
 	},
