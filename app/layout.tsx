@@ -1,5 +1,5 @@
-'use client';
-import Navbar from "@/components/03-organisms/navbar/navbar";
+"use client";
+import Header from "@/components/03-organisms/header/header";
 import "../styles/globals.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/03-organisms/footer/footer";
@@ -19,7 +19,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<Navbar />
+				<Header />
 				{children}
 				<Footer />
 			</body>
