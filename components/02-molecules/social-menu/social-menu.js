@@ -19,7 +19,7 @@ const SocialMenu = () => {
 	const renderIcons = icons.map((icon, index) => (
 
 		<div
-			className="mr-2 last:mr-0 xl:mr-4"
+			className="mr-2 last:mr-0 xl:mr-6"
 			key={index}
 		>
 
