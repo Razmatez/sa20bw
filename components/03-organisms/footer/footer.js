@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import React, { useState, useEffect } from "react";
 
 import Logo from "../../../assets/icons/logo.svg";
 import Overlay from "../../../assets/icons/footer-overlay.svg"
@@ -11,8 +12,6 @@ import Subscribe from "../../02-molecules/subscribe/subscribe";
 import Text from "../../01-atoms/text/text";
 
 const Footer = () => {
-
-	const isDesktop = window.innerWidth >= 768;
 
 	return (
 
@@ -41,8 +40,7 @@ const Footer = () => {
 			</div>
 
 			{/* Conditional rendering for overlay image */}
-			{isDesktop && (
-				<div className="absolute bottom-0 right-[-250px] z-0 flex items-end justify-end">
+				<div className="invisible lg:visible absolute bottom-0 right-[-250px] z-0 flex items-end justify-end">
 					<Image
 						src={Overlay}
 						alt="overlay"
@@ -51,7 +49,6 @@ const Footer = () => {
 						className="opacity-40"
 					/>
 				</div>
-			)}
 
 			<Divider />
 
