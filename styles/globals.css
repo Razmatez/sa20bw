@@ -146,15 +146,4 @@
 		background: linear-gradient(118.61deg, #00FFFF 0.44%, #59FF26 82.79%);
 	}
 
-	.gradient-durban {
-		background-image: url('https://media-cdn.incrowdsports.com/c3431b04-96a6-4264-97e1-e9b5969da2c6.png');
-		background-repeat: no-repeat;
-		width: 100%;
-		height: 100%;
-	}
-
-	.gradient-superkings {
-		background-image: url('https://media-cdn.incrowdsports.com/b7a9b599-8009-42a7-ba51-7f9cafcc1840.png');
-		background-repeat: no-repeat;
-	}
 }
