@@ -48,9 +48,9 @@ const Teams = (props) => {
     ];
 
     return (
-        <div className="pt-6 pb-10 px-5 md:pt-8 pb-16 px-16">
+        <div className="pt-6 pb-10 px-5 md:pt-4 pb-16 px-16">
 
-            <h1 className="py-4 md:py-8">Teams</h1>
+            <h2 className="pb-6 md:pb-8">Teams</h2>
 
             <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
 
