@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
 
 import Logo from "../../../assets/icons/logo.svg";
 import Overlay from "../../../assets/icons/footer-overlay.svg"
