@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useEffect } from "react";
 
 import Button from "../../01-atoms/button/button";
-import Icon from "../../01-atoms/icon/icon";
 import SocialMenu from "../../02-molecules/social-menu/social-menu";
 
 import AddIcon from "../../../assets/icons/button/add.svg";
@@ -52,9 +51,10 @@ const SideMenu = (props) => {
 						type="button"
 					>
 
-						<Icon
-							src={SearchIcon}
-							altText="search"
+						<SearchIcon
+							width={24}
+							height={24}
+							alt="search"
 						/>
 
 					</button>
@@ -65,9 +65,10 @@ const SideMenu = (props) => {
 						onClick={onClose}
 					>
 
-						<Icon
-							src={CloseIcon}
-							altText="close"
+						<CloseIcon
+							width={24}
+							height={24}
+							alt="close"
 						/>
 
 					</button>
@@ -96,15 +97,12 @@ const SideMenu = (props) => {
 
 										{item.children && (
 
-											<div className="w-6 h-6 ml-2">
-
-												<Image
-													className="side-menu-item-chevron"
-													src={ChevronDown}
-													alt="expand"
-												/>
-
-											</div>
+											<ChevronDown
+												className="side-menu-item-chevron ml-2"
+												width={24}
+												height={24}
+												alt="expand"
+											/>
 
 										)}
 
@@ -148,10 +146,10 @@ const SideMenu = (props) => {
 
 								<span className="ml-2 -mr-1">
 
-									<Icon
-										src={AddIcon}
-										height={24}
+									<AddIcon
 										width={24}
+										height={24}
+										alt="plus"
 									/>
 
 								</span>
@@ -172,14 +170,11 @@ const SideMenu = (props) => {
 							href="/login"
 						>
 
-							<div className="w-6 h-6">
-
-								<Icon
-									src={LoginIcon}
-									altText="login"
-								/>
-
-							</div>
+							<LoginIcon
+								width={24}
+								height={24}
+								alt="login"
+							/>
 
 							<span className="ml-2">
 								LOGIN/REGISTER
@@ -195,9 +190,8 @@ const SideMenu = (props) => {
 
 							<div className="w-12 h-auto">
 
-								<Icon
-									src={LogoRectangle}
-									altText="logo"
+								<LogoRectangle
+									alt="logo"
 								/>
 
 							</div>

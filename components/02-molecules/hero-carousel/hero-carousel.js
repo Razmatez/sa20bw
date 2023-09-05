@@ -8,7 +8,6 @@ import "swiper/css/scrollbar";
 
 import "./hero-carousel.css";
 
-import Icon from "../../01-atoms/icon/icon";
 import Hero from "../hero/hero";
 
 import ChevronLeftWhiteIcon from "../../../assets/icons/chevron/chevron-left-white.svg";
@@ -56,27 +55,21 @@ const HeroCarousel = (props) => {
 
 						<button className="hero-carousel-prev flex justify-center items-center w-10 h-10 rounded-xl bg-darkBlue80 mr-4">
 
-							<div className="w-6 h-6">
-
-								<Icon
-									src={ChevronLeftWhiteIcon}
-									altText="previous"
-								/>
-
-							</div>
+							<ChevronLeftWhiteIcon
+								width={24}
+								height={24}
+								alt="previous"
+							/>
 
 						</button>
 
 						<button className="hero-carousel-next flex justify-center items-center w-10 h-10 bg-darkBlue80 rounded-xl">
 
-							<div className="w-6 h-6">
-
-								<Icon
-									src={ChevronRightWhiteIcon}
-									altText="next"
-								/>
-
-							</div>
+							<ChevronRightWhiteIcon
+								width={24}
+								height={24}
+								alt="next"
+							/>
 
 						</button>
 

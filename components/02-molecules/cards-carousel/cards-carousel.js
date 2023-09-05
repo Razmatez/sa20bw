@@ -14,7 +14,12 @@ import Card from "../card/card";
 import ChevronLeftDarkIcon from "../../../assets/icons/chevron/chevron-left-dark.svg";
 import ChevronRightDarkIcon from "../../../assets/icons/chevron/chevron-right-dark.svg";
 
-const Carousel = (props) => {
+// NB:
+// When using this component, please wrap it in a container and offset all four sides by -4px each.
+// This is to account for the fact that padding of 4px has been added on each side of the carousel as the overflow: hidden applied from the Swiper library was cutting off the box shadow of the cards.
+// --> Usage: Add className="-m-1" to wrapper div.
+
+const CardsCarousel = (props) => {
 
 	const {
 		content
@@ -34,8 +39,19 @@ const Carousel = (props) => {
 					draggable: false,
 					el: ".cards-carousel-scrollbar"
 				}}
-				slidesPerView={4}
+				slidesPerGroup={1}
+				slidesPerView={1.18}
 				spaceBetween={24}
+				breakpoints={{
+					600: {
+						slidesPerGroup: 2,
+						slidesPerView: 2.2
+					},
+					1024: {
+						slidesPerGroup: 4,
+						slidesPerView: 4
+					}
+				}}
 			>
 
 				{content.map((data, index) => (
@@ -48,7 +64,7 @@ const Carousel = (props) => {
 
 				))}
 
-				<div className="flex justify-between items-center w-full pt-8">
+				<div className="hidden lg:flex justify-between items-center w-full lg:pt-8">
 
 					<div className="cards-carousel-scrollbar" />
 
@@ -56,27 +72,21 @@ const Carousel = (props) => {
 
 						<button className="cards-carousel-prev flex justify-center items-center w-10 h-10 rounded-xl bg-lightGrey mr-4">
 
-							<div className="w-6 h-6">
-
-								<Icon
-									src={ChevronLeftDarkIcon}
-									altText="previous"
-								/>
-
-							</div>
+							<ChevronLeftDarkIcon
+								width={24}
+								height={24}
+								alt="previous"
+							/>
 
 						</button>
 
 						<button className="cards-carousel-next flex justify-center items-center w-10 h-10 rounded-xl bg-lightGrey">
 
-							<div className="w-6 h-6">
-
-								<Icon
-									src={ChevronRightDarkIcon}
-									altText="next"
-								/>
-
-							</div>
+							<ChevronRightDarkIcon
+								width={24}
+								height={24}
+								alt="next"
+							/>
 
 						</button>
 
@@ -92,4 +102,4 @@ const Carousel = (props) => {
 
 }
 
-export default Carousel;
+export default CardsCarousel;
