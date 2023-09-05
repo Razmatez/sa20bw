@@ -1,9 +1,9 @@
 .cards-carousel .swiper {
-	@apply p-1;
+	@apply py-1 px-6 lg:p-1;
 }
 
-.cards-carousel .swiper-button-disabled img {
-	opacity: 0.2;
+.cards-carousel .swiper-button-disabled svg {
+	@apply opacity-20;
 }
 
 .cards-carousel-scrollbar {

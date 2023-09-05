@@ -1,27 +1,24 @@
-import Icon from "../icon/icon";
+import ShareIcon from "../../../assets/icons/card/share-dark.svg";
+
+import "./share.css";
 
 const Share = (props) => {
 
 	const {
-		src,
-		altText,
-		link,
-		height,
-		width
+		darkTheme
 	} = props;
 
 	return (
 
-		<a href={link}>
+		<button className={`w-6 h-6 flex justify-center items-center border rounded-lg ${darkTheme ? "border-darkBlue30" : "border-darkBlue"}`}>
 
-			<Icon
-				src={src}
-				alt={altText}
-				height={height}
-				width={width}
+			<ShareIcon
+				className={darkTheme ? "share-icon-dark-theme" : "share-icon"}
+				width={16}
+				height={16}
 			/>
 
-		</a>
+		</button>
 
 	);
 

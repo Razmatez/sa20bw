@@ -7,10 +7,8 @@ export default {
 };
 
 export const Default = {
-	name: "Social",
+	name: "Share",
 	args: {
-		src: "https://placehold.co/30x30",
-		altText: "",
-		link: "",
+		darkTheme: false
 	}
 };

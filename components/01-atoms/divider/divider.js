@@ -4,11 +4,9 @@ const Divider = (props) => {
 		darkTheme = false
 	} = props;
 
-	const renderClassName = darkTheme ? "h-px bg-grey" : "h-px bg-darkGrey";
-
 	return (
 
-		<hr className={renderClassName} />
+		<hr className={`h-px ${darkTheme ? "border-darkGrey" : "h-px border-grey"}`} />
 
 	)
 

@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 import Button from "../../01-atoms/button/button";
@@ -81,12 +80,16 @@ const Header = (props) => {
 			{/* Primary menu */}
 			<div className="relative flex flex-nowrap w-full h-15 xl:h-24 items-center justify-between bg-darkBlue px-5 xl:px-16">
 
-				<Link href="/">
+				<Link
+					className="flex w-[190px] h-7 xl:w-[284px] xl:h-10"
+					href="/"
+				>
 
 					<Logo
-						className="h-7 xl:h-10 w-full"
+						width="100%"
+						height="100%"
 						alt="logo"
-					 />
+					/>
 
 				</Link>
 

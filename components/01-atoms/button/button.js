@@ -29,15 +29,31 @@ const Button = (props) => {
 			variantClassNames = "text-lightGrey bg-darkBlue hover:darkBlue90";
 		}
 
+		const renderIconPadding = () => {
+
+			if (variant === "tertiary") {
+				return "";
+			} else {
+				if (withArrowLeft) {
+					return "pl-3 pr-4";
+				} else if (withArrowRight) {
+					return "pl-4 pr-3";
+				} else {
+					return "px-4";
+				}
+			}
+
+		}
+
 		switch (size) {
 		case "sm":
-			sizeClassNames = "button-sm h-8 rounded-xl px-4 py-3 flex items-center justify-center";
+			sizeClassNames = `button-sm h-8 rounded-xl flex items-center justify-center ${renderIconPadding()}`;
 			break;
 		case "lg":
-			sizeClassNames = "button-base h-12 rounded-xl px-4 flex items-center justify-center";
+			sizeClassNames = `button-base h-12 rounded-xl flex items-center justify-center ${renderIconPadding()}`;
 			break;
 		default: // md
-			sizeClassNames = "button-base h-10 rounded-xl px-4 flex items-center justify-center";
+			sizeClassNames = `button-base h-10 rounded-xl flex items-center justify-center ${renderIconPadding()}`;
 		}
 
 		return `${variantClassNames} ${sizeClassNames}`;
