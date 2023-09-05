@@ -13,11 +13,11 @@ import Hero from "../hero/hero";
 import ChevronLeftWhiteIcon from "../../../assets/icons/chevron/chevron-left-white.svg";
 import ChevronRightWhiteIcon from "../../../assets/icons/chevron/chevron-right-white.svg";
 
+import content from "./dummy-data";
+
 const HeroCarousel = (props) => {
 
-	const {
-		content
-	} = props;
+	// const { content } = props;
 
 	return (
 
@@ -47,11 +47,11 @@ const HeroCarousel = (props) => {
 				))}
 
 
-				<div className="absolute bottom-8 w-full flex justify-between items-center px-16 z-10">
+				<div className="absolute bottom-6 lg:bottom-8 w-full flex justify-between items-center px-5 lg:px-16 z-10">
 
 					<div className="hero-carousel-scrollbar" />
 
-					<div className="flex">
+					<div className="hidden lg:flex">
 
 						<button className="hero-carousel-prev flex justify-center items-center w-10 h-10 rounded-xl bg-darkBlue80 mr-4">
 

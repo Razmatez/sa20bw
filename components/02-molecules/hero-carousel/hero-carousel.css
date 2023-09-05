@@ -1,6 +1,5 @@
 .hero-carousel-scrollbar {
-	@apply h-1 rounded-sm;
-	width: 300px;
+	@apply h-1 w-full lg:w-[300px] rounded-sm;
 }
 
 .hero-carousel-scrollbar {

@@ -1,0 +1,7 @@
+.share-icon path {
+	@apply fill-darkBlue;
+}
+
+.share-icon-dark-theme path {
+	@apply fill-darkBlue30;
+}

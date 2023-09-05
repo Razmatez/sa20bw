@@ -8,7 +8,7 @@ const Hero = (props) => {
 
 	return (
 
-		<div className="relative h-[640px]">
+		<div className="relative h-[485px] lg:h-[640px]">
 
 			{/* <ResponsiveImage
 				heroMedia={content}

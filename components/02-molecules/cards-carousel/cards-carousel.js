@@ -22,7 +22,8 @@ import ChevronRightDarkIcon from "../../../assets/icons/chevron/chevron-right-da
 const CardsCarousel = (props) => {
 
 	const {
-		content
+		content,
+		darkTheme
 	} = props;
 
 	return (
@@ -58,7 +59,10 @@ const CardsCarousel = (props) => {
 
 					<SwiperSlide key={index}>
 
-						<Card content={data} />
+						<Card
+							content={data}
+							darkTheme={darkTheme}
+						/>
 
 					</SwiperSlide>
 
