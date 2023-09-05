@@ -1,6 +1,4 @@
 
-import Text from "../../01-atoms/text/text";
-
 import Chevron from "../../../assets/icons/chevron/chevron-right-dark.svg"
 import Image from "next/image";
 
@@ -25,10 +23,7 @@ const Subscribe = () => {
 					type=""
 				/>
 				<button className="border rounded-br-lg rounded-tr-lg border-l-0 bg-lightBlue py-4 pr-3 pl-4">
-					<Image
-						src={Chevron}
-						alt="logo"
-					/>
+					<Chevron alt="subscribe" />
 				</button>
 			</div >
 
