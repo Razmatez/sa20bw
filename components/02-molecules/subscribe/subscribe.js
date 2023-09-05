@@ -14,7 +14,7 @@ const Subscribe = () => {
 
 			</div>
 
-			<div class="mb-4 flex pb-8">
+			<div className="mb-4 flex pb-8">
 				<input
 					className="border rounded-bl-lg rounded-tl-lg border-r-0 px-4 py-2 border-white bg-darkBlue placeholder-grey"
 					id=""
