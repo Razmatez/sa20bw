@@ -12,8 +12,6 @@ import Text from "../../01-atoms/text/text";
 
 const Footer = () => {
 
-	const isDesktop = window.innerWidth >= 768;
-
 	return (
 
 		<div className="relative bg-darkBlue overflow-hidden">
@@ -41,8 +39,7 @@ const Footer = () => {
 			</div>
 
 			{/* Conditional rendering for overlay image */}
-			{isDesktop && (
-				<div className="absolute bottom-0 right-[-250px] z-0 flex items-end justify-end">
+				<div className="invisible lg:visible absolute bottom-0 right-[-250px] z-0 flex items-end justify-end">
 					<Image
 						src={Overlay}
 						alt="overlay"
@@ -51,7 +48,6 @@ const Footer = () => {
 						className="opacity-40"
 					/>
 				</div>
-			)}
 
 			<Divider />
 
