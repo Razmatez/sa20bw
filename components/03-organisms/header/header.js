@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Button from "../../01-atoms/button/button";
-import Icon from "../../01-atoms/icon/icon";
 import SideMenu from "./side-menu";
 import SocialMenu from "../../02-molecules/social-menu/social-menu";
 
@@ -63,11 +62,10 @@ const Header = (props) => {
 					href="/login"
 				>
 
-					<Icon
-						src={LoginIcon}
-						altText="login"
-						height={24}
+					<LoginIcon
 						width={24}
+						height={24}
+						alt="login"
 					/>
 
 					<span className="ml-2">
@@ -85,37 +83,37 @@ const Header = (props) => {
 
 				<Link href="/">
 
-					<Image
+					<Logo
 						className="h-7 xl:h-10 w-full"
-						src={Logo}
 						alt="logo"
-					/>
+					 />
 
 				</Link>
 
 				<div className="flex xl:hidden">
 
 					<button
-						className="w-6 h-6 mr-6"
+						className="mr-6"
 						type="button"
 					>
 
-						<Icon
-							src={SearchIcon}
-							altText="search"
+						<SearchIcon
+							width={24}
+							height={24}
+							alt="search"
 						/>
 
 					</button>
 
 					<button
-						className="w-6 h-6"
 						type="button"
 						onClick={handleMenuToggle}
 					>
 
-						<Icon
-							src={HamburgerIcon}
-							altText="hamburger"
+						<HamburgerIcon
+							width={24}
+							height={24}
+							alt="hamburger"
 						/>
 
 					</button>
@@ -147,9 +145,8 @@ const Header = (props) => {
 
 										<div className="w-6 h-6 ml-2">
 
-											<Image
+											<ChevronDown
 												className="menu-item-chevron"
-												src={ChevronDown}
 												alt="expand"
 											/>
 
@@ -195,10 +192,10 @@ const Header = (props) => {
 
 							<span className="ml-2 -mr-1">
 
-								<Icon
-									src={AddIcon}
-									height={24}
+								<AddIcon
 									width={24}
+									height={24}
+									alt="plus"
 								/>
 
 							</span>
@@ -209,10 +206,10 @@ const Header = (props) => {
 
 					<div className="ml-6">
 
-						<Icon
-							src={SearchIcon}
-							height={24}
+						<SearchIcon
 							width={24}
+							height={24}
+							alt="search"
 						/>
 
 					</div>

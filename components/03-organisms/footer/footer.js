@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import Logo from "../../../assets/icons/logo.svg";
@@ -20,11 +19,7 @@ const Footer = () => {
 
 				<div className="pt-16 px-5 lg:px-16 pr-[134px]">
 
-					<Image
-						src={Logo}
-						alt="logo"
-
-					/>
+					<Logo alt="logo" />
 
 					<Subscribe />
 
@@ -39,14 +34,14 @@ const Footer = () => {
 			</div>
 
 			{/* Conditional rendering for overlay image */}
-			<div className="invisible lg:visible absolute bottom-0 right-[-250px] z-0 flex items-end justify-end">
-				<Image
-					src={Overlay}
-					alt="overlay"
+			<div className="invisible lg:visible absolute bottom-0 right-[-250px] z-0 flex items-end justify-end opacity-40">
+
+				<Overlay
 					width={1100}
 					height={400}
-					className="opacity-40"
+					alt="overlay"
 				/>
+
 			</div>
 
 			<Divider />

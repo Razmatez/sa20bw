@@ -1,11 +1,13 @@
-import React from "react";
+import ChevronRightDarkIcon from "../../../assets/icons/chevron/chevron-right-dark.svg";
 
 const Button = (props) => {
 
 	const {
 		variant,
 		size,
-		styles
+		styles,
+		withArrowLeft,
+		withArrowRight
 	} = props;
 
 	const renderClassNames = () => {
@@ -46,7 +48,45 @@ const Button = (props) => {
 
 		<button className={`${renderClassNames()} ${styles ? styles : ""}`}>
 
-			{props.children}
+			{!withArrowLeft && !withArrowRight && props.children}
+
+			{withArrowLeft && (
+
+				<div className="flex items-center">
+
+					<ChevronRightDarkIcon
+						className="mr-2"
+						width={24}
+						height={24}
+						alt="arrow"
+					/>
+
+					<div>
+						{props.children}
+					</div>
+
+				</div>
+
+			)}
+
+			{withArrowRight && (
+
+				<div className="flex items-center">
+
+					<div>
+						{props.children}
+					</div>
+
+					<ChevronRightDarkIcon
+						className="ml-2"
+						width={24}
+						height={24}
+						alt="arrow"
+					/>
+
+				</div>
+
+			)}
 
 		</button>
 
