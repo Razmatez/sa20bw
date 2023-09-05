@@ -128,6 +128,19 @@
 		letter-spacing: 0.04em;
 	}
 
+	/* Link */
+
+	.link-lg {
+		@apply body-sm;
+	}
+
+	.link-sm {
+		@apply label-base;
+		letter-spacing: 0.005em;
+	}
+
+
+
 	/* Gradients */
 
 	.gradient-dark-to-blue {

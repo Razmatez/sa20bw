@@ -59,7 +59,7 @@ const FooterMenu = () => {
       });
       setExpandedSections(newExpandedSections);
 
-      setScreenSize(function() {
+      setScreenSize(function () {
         return window.innerWidth;
       })
     };
@@ -82,15 +82,15 @@ const FooterMenu = () => {
   };
 
   return (
-    <div className="pt-8 px-5 pb-8 md:py-16 md:pr-16">
+    <div className="pt-8 px-5 pb-8 lg:py-16 lg:pr-16">
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
 
         {footerSections.map((section, index) => (
           <div className="" key={index}>
 
             <button
-              className="cursor-default lg:cursor-pointer text-lightGrey h7 pb-6 md:h6 md:text-lightGrey flex items-center justify-between w-full"
+              className="cursor-default lg:cursor-pointer text-lightGrey h7 pb-6 lg:h6 lg:text-lightGrey flex items-center justify-between w-full"
               onClick={() => toggleSection(index)}
             >
               <div>{section.title}</div>
@@ -107,16 +107,17 @@ const FooterMenu = () => {
 
             </button>
 
-            {(expandedSections[index] || screenSize >= 640) && (
+            {(expandedSections[index] || screenSize >= 1024) && (
               <div>
 
                 <ul className="list-inside">
 
                   {section.links.map((link, linkIndex) => (
 
-                    <li key={linkIndex} className="mb-1 button-sm text-grey pb-4">
+                    <li key={linkIndex} className="mb-1 pb-4">
 
-                      <a href={link.url}>{link.text}</a>
+                      <a href={link.url}
+                        className="text-grey link-lg">{link.text}</a>
 
                     </li>
                   ))}
