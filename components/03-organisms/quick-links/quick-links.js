@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useState } from "react";
 
 import Ticket from "../../../assets/icons/quick-links/Ticket.svg";
@@ -9,7 +10,7 @@ import ListBlue from "../../../assets/icons/quick-links/List-Blue.svg";
 import Team from "../../../assets/icons/quick-links/Team.svg";
 import TeamBlue from "../../../assets/icons/quick-links/Team-Blue.svg";
 
-import Image from "next/image";
+
 
 const QuickLinks = (props) => {
     const links = [
