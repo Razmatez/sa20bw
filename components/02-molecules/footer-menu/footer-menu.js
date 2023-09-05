@@ -107,16 +107,17 @@ const FooterMenu = () => {
 
             </button>
 
-            {(expandedSections[index] || screenSize >= 1080) && (
+            {(expandedSections[index] || screenSize >= 1024) && (
               <div>
 
                 <ul className="list-inside">
 
                   {section.links.map((link, linkIndex) => (
 
-                    <li key={linkIndex} className="mb-1 button-sm text-grey pb-4">
+                    <li key={linkIndex} className="mb-1 pb-4">
 
-                      <a href={link.url}>{link.text}</a>
+                      <a href={link.url}
+                        className="text-grey link-lg">{link.text}</a>
 
                     </li>
                   ))}

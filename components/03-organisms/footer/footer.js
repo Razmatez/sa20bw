@@ -55,7 +55,11 @@ const Footer = () => {
 
 				<div className="pr-10 flex order-3 lg:order-1 lg:pb-0 pb-5">
 
-					<Text content="© Copyright SA20 2023. All Rights Reserved." />
+					<div
+						className="label-base text-grey"
+					>
+						© Copyright SA20 2023. All Rights Reserved.
+					</div>
 
 				</div>
 
@@ -63,10 +67,10 @@ const Footer = () => {
 
 					<div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:w-auto">
 
-						<Link className="pr-10 lg:pb-0 pb-4 lg:w-full" href="/">Tickets Terms</Link>
-						<Link className="pr-10 lg:pb-0 pb-4 lg:w-full" href="/">Privacy Policy</Link>
-						<Link className="pr-10 lg:pb-0 pb-4 lg:w-full" href="/">Terms of Use</Link>
-						<Link className="pr-10 lg:pb-0 pb-4 lg:w-full" href="/">Cookie Policy</Link>
+						<Link className="pr-10 lg:pb-0 pb-4 lg:w-full link-sm text-grey" href="/">Tickets Terms</Link>
+						<Link className="pr-10 lg:pb-0 pb-4 lg:w-full link-sm text-grey" href="/">Privacy Policy</Link>
+						<Link className="pr-10 lg:pb-0 pb-4 lg:w-full link-sm text-grey" href="/">Terms of Use</Link>
+						<Link className="pr-10 lg:pb-0 pb-4 lg:w-full link-sm text-grey" href="/">Cookie Policy</Link>
 
 					</div>
 

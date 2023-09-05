@@ -4,7 +4,7 @@ const Divider = (props) => {
 		darkTheme = false
 	} = props;
 
-	const renderClassName = darkTheme ? "h-px bg-grey relative" : "h-px bg-darkGrey relative";
+	const renderClassName = darkTheme ? "h-px border-grey relative" : "h-px border-darkGrey relative";
 
 	return (
 
