@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Link from "next/link";
 
 import Divider from "../../01-atoms/divider/divider";
@@ -17,16 +16,6 @@ const Card = (props) => {
 		hideImage = false,
 		large = false
 	} = props;
-
-	// const [shareMenuOpen, setShareMenuOpen] = useState(false);
-
-	// const handleShareClick = (e) => {
-
-	// 	e.preventDefault();
-
-	// 	setShareMenuOpen(!shareMenuOpen);
-
-	// }
 
 	return (
 
@@ -78,23 +67,9 @@ const Card = (props) => {
 						{formatDate(content.publishDate)}
 					</span>
 
-					{/* Waiting on confirmation if this data is available */}
-					{/* <span className="flex items-center body-sm text-darkGrey before:w-[3px] before:h-[3px] before:mx-2 before:bg-darkGrey before:rounded">
-							<div>04:01 min</div>
-						</span> */}
-
-					{/* {shareMenuOpen && (
-
-						<div>
-
-						</div>
-
-					)} */}
-
 					<Share
 						darkTheme={darkTheme}
 						large={large}
-						// onClick={handleShareClick}
 					/>
 
 				</div>
