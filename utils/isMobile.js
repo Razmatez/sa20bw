@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 const isMobile = () => {
 
-	const [width, setWidth] = useState(window.innerWidth);
+	const [width, setWidth] = useState();
 
 	 useEffect(() => {
 
