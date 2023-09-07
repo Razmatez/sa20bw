@@ -45,13 +45,16 @@ const Share = (props) => {
 
 	return (
 
-		<div className="flex">
+		<div
+			className="flex"
+			onClick={(e) => e.preventDefault()}
+		>
 
 			{shareMenuOpen && (
 
 				<div className="flex rounded-lg bg-white shadow-3 mr-1">
 
-					<a className={`flex justify-center items-center ${large ? "w-8 h-8" : "w-6 h-6"}`}>
+					<button className={`flex justify-center items-center ${large ? "w-8 h-8" : "w-6 h-6"}`}>
 
 						<div className="w-4 h-4">
 							<Image
@@ -60,9 +63,9 @@ const Share = (props) => {
 							/>
 						</div>
 
-					</a>
+					</button>
 
-					<a className={`flex justify-center items-center ${large ? "w-8 h-8" : "w-6 h-6"}`}>
+					<button className={`flex justify-center items-center ${large ? "w-8 h-8" : "w-6 h-6"}`}>
 
 						<div className="w-4 h-4">
 							<Image
@@ -71,9 +74,9 @@ const Share = (props) => {
 							/>
 						</div>
 
-					</a>
+					</button>
 
-					<a className={`flex justify-center items-center ${large ? "w-8 h-8" : "w-6 h-6"}`}>
+					<button className={`flex justify-center items-center ${large ? "w-8 h-8" : "w-6 h-6"}`}>
 
 						<div className="w-4 h-4">
 							<Image
@@ -82,7 +85,7 @@ const Share = (props) => {
 							/>
 						</div>
 
-					</a>
+					</button>
 
 				</div>
 
