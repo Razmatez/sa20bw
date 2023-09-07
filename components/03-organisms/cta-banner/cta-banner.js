@@ -1,9 +1,19 @@
 // import Button from "../../components/01-atoms/button/button";
 import Button from "../../01-atoms/button/button"
 
-const CtaBanner = (props) => {
+const CtaBanner = () => {
 
-	const { data } = props;
+	// const { data } = props;
+
+	const data = {
+		title: "Join the SA20!",
+		description: "Experience cricket like never before: access live matches, expert statistics , match highlights, and stay up to date with everything SA20",
+		button: "Join now",
+		//image: "https://media-cdn.incrowdsports.com/d7a0a698-aaab-4824-b4a2-7d062c76d445.png",
+		//category: "Poll",
+		preHeader: "what is your",
+		width: " w-full"
+	}
 
 	return (
 
@@ -26,7 +36,7 @@ const CtaBanner = (props) => {
 
 						<div className="flex justify-center items-center">
 
-							<span className="pb-4 text-center bg-clip-text text-transparent gradient-lime-to-green h1">
+							<span className="pb-4 text-center bg-clip-text text-transparent gradient-blue-to-lime h1">
 								{data.title}
 							</span>
 

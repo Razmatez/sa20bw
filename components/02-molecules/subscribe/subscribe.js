@@ -27,7 +27,7 @@ const Subscribe = () => {
 				</button>
 			</div >
 
-			<p className="text-grey text-h7 pb-8">
+			<p className="text-grey link-sm pb-8">
 				By subscribing you agree to with our
 				<a className="underline pl-1" href="#">Terms of use</a>
 			</p>

@@ -1,13 +1,13 @@
 import Link from "next/link";
 
 import Logo from "../../../assets/icons/logo.svg";
-import Overlay from "../../../assets/icons/footer-overlay.svg"
+import Overlay from "../../../assets/icons/footer-image.svg";
+
 
 import Divider from "../../01-atoms/divider/divider";
 import FooterMenu from "../../02-molecules/footer-menu/footer-menu";
 import SocialMenu from "../../02-molecules/social-menu/social-menu";
 import Subscribe from "../../02-molecules/subscribe/subscribe";
-import Text from "../../01-atoms/text/text";
 
 const Footer = () => {
 
@@ -19,7 +19,9 @@ const Footer = () => {
 
 				<div className="pt-16 px-5 lg:px-16 pr-[134px]">
 
-					<Logo alt="logo" />
+					<Link href="#">
+						<Logo alt="logo" />
+					</Link>
 
 					<Subscribe />
 
@@ -34,11 +36,11 @@ const Footer = () => {
 			</div>
 
 			{/* Conditional rendering for overlay image */}
-			<div className="invisible lg:visible absolute bottom-0 right-[-250px] z-0 flex items-end justify-end opacity-40">
+			<div className="invisible lg:visible absolute bottom-0 right-0 z-0 flex items-end justify-end opacity-100">
 
 				<Overlay
-					width={1100}
-					height={400}
+					width={420}
+					height={520}
 					alt="overlay"
 				/>
 

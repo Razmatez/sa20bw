@@ -16,17 +16,19 @@ const Button = (props) => {
 		let sizeClassNames = "";
 
 		switch (variant) {
-		case "secondary":
-			variantClassNames = "bg-transparent rounded-md border-darkBlue border-2 border-solid hover:bg-darkBlue10";
-			break;
-		case "tertiary":
-			variantClassNames = "";
-			break;
-		case "blue":
-			variantClassNames = "bg-lightBlue";
-			break;
-		default: // primary
-			variantClassNames = "text-lightGrey bg-darkBlue hover:darkBlue90";
+			case "secondary":
+				variantClassNames = "bg-transparent border-darkBlue border-2 border-solid hover:bg-darkBlue10";
+				break;
+			case "tertiary":
+				variantClassNames = "";
+				break;
+			case "blue":
+				variantClassNames = "bg-lightBlue";
+				break;
+			case "invert":
+				variantClassNames = "bg-transparent rounded-md border-white border-2 border-solid"
+			default: // primary
+				variantClassNames = "text-lightGrey bg-darkBlue hover:darkBlue90";
 		}
 
 		const renderIconPadding = () => {
@@ -46,14 +48,14 @@ const Button = (props) => {
 		}
 
 		switch (size) {
-		case "sm":
-			sizeClassNames = `button-sm h-8 rounded-xl flex items-center justify-center ${renderIconPadding()}`;
-			break;
-		case "lg":
-			sizeClassNames = `button-base h-12 rounded-xl flex items-center justify-center ${renderIconPadding()}`;
-			break;
-		default: // md
-			sizeClassNames = `button-base h-10 rounded-xl flex items-center justify-center ${renderIconPadding()}`;
+			case "sm":
+				sizeClassNames = `button-sm h-8 rounded-xl flex items-center justify-center ${renderIconPadding()}`;
+				break;
+			case "lg":
+				sizeClassNames = `button-base h-12 rounded-xl flex items-center justify-center ${renderIconPadding()}`;
+				break;
+			default: // md
+				sizeClassNames = `button-base h-10 rounded-xl flex items-center justify-center ${renderIconPadding()}`;
 		}
 
 		return `${variantClassNames} ${sizeClassNames}`;
