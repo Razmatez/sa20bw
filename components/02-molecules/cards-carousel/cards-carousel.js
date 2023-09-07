@@ -8,7 +8,6 @@ import "swiper/css/scrollbar";
 
 import "./cards-carousel.css";
 
-import Icon from "../../01-atoms/icon/icon";
 import Card from "../card/card";
 
 import ChevronLeftDarkIcon from "../../../assets/icons/chevron/chevron-left-dark.svg";
@@ -55,7 +54,7 @@ const CardsCarousel = (props) => {
 				}}
 			>
 
-				{content.map((data, index) => (
+				{content.slice(0, 8).map((data, index) => (
 
 					<SwiperSlide key={index}>
 
