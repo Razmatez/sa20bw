@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 import Chevron from "../../../assets/icons/chevron/chevron-down-white.svg"
-import Image from "next/image";
 
 const footerSections = [
   {
@@ -90,13 +89,12 @@ const FooterMenu = () => {
           <div className="" key={index}>
 
             <button
-              className="cursor-default lg:cursor-pointer text-lightGrey h7 pb-6 lg:h6 lg:text-lightGrey flex items-center justify-between w-full"
+              className="cursor-pointer text-lightGrey h7 pb-6 lg:h6 lg:text-lightGrey flex items-center justify-between w-full"
               onClick={() => toggleSection(index)}
             >
               <div>{section.title}</div>
 
-              <Image
-                src={Chevron}
+              <Chevron
                 alt="logo"
                 className="inline-block lg:hidden"
                 style={{

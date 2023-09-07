@@ -6,7 +6,7 @@ const Divider = (props) => {
 
 	return (
 
-		<hr className={`h-px ${darkTheme ? "border-darkGrey" : "h-px border-grey"}`} />
+		<hr className={`h-px ${darkTheme ? "border-grey relative" : "h-px border-darkGrey relative"}`} />
 
 	)
 
