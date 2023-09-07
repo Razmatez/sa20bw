@@ -1,6 +1,7 @@
 "use client";
 import HeroCarousel from "../components/02-molecules/hero-carousel/hero-carousel";
 import CarouselSection from "../components/03-organisms/carousel-section/carousel-section";
+import LatestNewsGrid from "../components/03-organisms/latest-news-grid/latest-news-grid";
 
 export default function Home() {
 
@@ -10,6 +11,7 @@ export default function Home() {
 			<HeroCarousel />
 			<CarouselSection />
 			<CarouselSection darkTheme />
+			<LatestNewsGrid />
 
 		</main>
 	)
