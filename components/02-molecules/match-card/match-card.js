@@ -35,7 +35,7 @@ const MatchCard = () => {
                         <p className="mr-4">{match.matchInfo}</p>
                     </div>
 
-                    <div className="flex justify-center items-center bg-lightGrey mb-6 pb-6 rounded-tr-2xl rounded-br-2xl rounded-bl-2xl shadow-xl border border-darkGrey">
+                    <div className="flex justify-center items-center bg-lightGrey mb-6 pb-6 rounded-tr-2xl rounded-br-2xl rounded-bl-2xl shadow-xl border border-lightGrey">
                         {/* Column 1 */}
                         <div className="w-1/3 p-4 flex justify-start items-center flex-col lg:flex-row">
                             {match.team1.logo}

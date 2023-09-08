@@ -1,7 +1,9 @@
 import Button from "../../01-atoms/button/button";
 import Results from "../../../assets/icons/match-card/results.svg";
 import Points from "../../../assets/icons/match-card/points-table.svg";
-import MatchCard from "../../02-molecules/match-card/match-card"
+import MatchCard from "../../02-molecules/match-card/match-card";
+
+import Link from 'next/link';
 
 const Tabs = (props) => {
     const { activeTab } = props;
@@ -21,10 +23,11 @@ const Tabs = (props) => {
                 <h2 className="pb-4">No Results yet</h2>
 
                 <p className="pb-6 body-xl text-grey">No match results for now, but stay tuned for updates in Season 2. While you wait, take a peak</p>
-                <Button
-                    variant="tertiary">
+                <Link
+                    href="/matches"
+                >
                     View Fixtures
-                </Button>
+                </Link>
             </div>),
         },
         {
@@ -37,10 +40,11 @@ const Tabs = (props) => {
                     <p className="pb-6 body-xl text-grey">There are currently no points to display, but keep an eye out for updates during Season 2! In the mean time
                         , explore upcoming fixtures.
                     </p>
-                    <Button
-                        variant="tertiary">
+                    <Link
+                        href="/matches"
+                    >
                         View Fixtures
-                    </Button>
+                    </Link>
                 </div>
             ),
         },
