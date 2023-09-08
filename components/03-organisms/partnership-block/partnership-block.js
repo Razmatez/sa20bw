@@ -1,6 +1,5 @@
 import React from "react";
-import Image from "next/image";
-import Logo from "../../../assets/icons/logo.svg";
+import Logo from "../../../assets/icons/logo/logo.svg";
 
 const Partnership = () => {
 
