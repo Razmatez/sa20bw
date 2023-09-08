@@ -5,7 +5,6 @@ const Fixtures = () => {
 
     const [activeTab, setActiveTab] = useState(1);
 
-
     const handleTabClick = (tabNumber) => {
         setActiveTab(tabNumber);
     };
