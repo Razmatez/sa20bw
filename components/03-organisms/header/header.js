@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 import Button from "../../01-atoms/button/button";
@@ -9,7 +10,7 @@ import SocialMenu from "../../02-molecules/social-menu/social-menu";
 import AddIcon from "../../../assets/icons/button/add.svg";
 import ChevronDown from "../../../assets/icons/chevron/chevron-down-white.svg";
 import HamburgerIcon from "../../../assets/icons/header/hamburger.svg";
-import Logo from "../../../assets/icons/logo.svg";
+import Logo from "../../../assets/icons/logo/logo.svg?url";
 import LoginIcon from "../../../assets/icons/header/login.svg";
 import SearchIcon from "../../../assets/icons/header/search.svg";
 
@@ -80,16 +81,14 @@ const Header = (props) => {
 			{/* Primary menu */}
 			<div className="relative flex flex-nowrap w-full h-15 xl:h-24 items-center justify-between bg-darkBlue px-5 xl:px-16">
 
-				<Link
-					className="flex w-[190px] h-7 xl:w-[284px] xl:h-10"
-					href="/"
-				>
+				<Link href="/">
 
-					<Logo
-						width="100%"
-						height="100%"
-						alt="logo"
-					/>
+					<div className="flex w-[190px] h-7 xl:w-[284px] xl:h-10">
+						<Image
+							src={Logo}
+							alt="logo"
+						/>
+					</div>
 
 				</Link>
 

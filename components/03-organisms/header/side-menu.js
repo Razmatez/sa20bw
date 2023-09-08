@@ -9,7 +9,7 @@ import AddIcon from "../../../assets/icons/button/add.svg";
 import ChevronDown from "../../../assets/icons/chevron/chevron-down-white.svg";
 import CloseIcon from "../../../assets/icons/global/close-white.svg";
 import LoginIcon from "../../../assets/icons/header/login.svg";
-import LogoRectangle from "../../../assets/icons/logo-rectangle.svg";
+import LogoSquare from "../../../assets/icons/logo/logo-square.svg";
 import SearchIcon from "../../../assets/icons/header/search.svg";
 
 const SideMenu = (props) => {
@@ -190,7 +190,7 @@ const SideMenu = (props) => {
 
 							<div className="w-12 h-auto">
 
-								<LogoRectangle
+								<LogoSquare
 									alt="logo"
 								/>
 

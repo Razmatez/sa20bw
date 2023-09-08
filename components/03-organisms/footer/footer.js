@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import Logo from "../../../assets/icons/logo.svg";
+import Logo from "../../../assets/icons/logo/logo.svg";
 import Overlay from "../../../assets/icons/footer-image.svg";
 
 
