@@ -1,9 +1,7 @@
 "use client"
-
-/* eslint-disable react-hooks/rules-of-hooks */
 import { useState, useEffect } from "react";
 
-const isMobile = () => {
+const IsMobile = () => {
 
 	const [width, setWidth] = useState();
 
@@ -25,4 +23,4 @@ const isMobile = () => {
 
 }
 
-export default isMobile;
+export default IsMobile;

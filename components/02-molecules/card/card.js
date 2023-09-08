@@ -4,7 +4,7 @@ import Divider from "../../01-atoms/divider/divider";
 import ResponsiveImage from "../../01-atoms/image/responsiveImage";
 import Share from "../../01-atoms/share/share";
 
-import formatDate from "../../../utils/formatDate";
+import FormatDate from "../../../utils/FormatDate";
 
 import PlayIcon from "../../../assets/icons/card/play.svg";
 
@@ -17,14 +17,38 @@ const Card = (props) => {
 		large = false
 	} = props;
 
+	const renderCardHeight = () => {
+
+		if (large) {
+			return "max-h-[542px]";
+		} else if (hideImage) {
+			return "max-h-[172px]";
+		} else {
+			return "max-h-[346px]";
+		}
+
+	}
+
+	const renderImageHeight = () => {
+
+		if (hideImage) {
+			return "hidden";
+		} else if (large) {
+			return "relative h-[338px]";
+		} else {
+			return "relative h-[174px]";
+		}
+
+	}
+
 	return (
 
 		<Link
-			className={`block w-full h-full shadow-1 rounded-2xl overflow-hidden ${large ? "max-h-[542px]" : hideImage ? "max-h-[172px]" : "max-h-[346px]"}`}
+			className={`block w-full h-full shadow-1 rounded-2xl overflow-hidden ${renderCardHeight()}`}
 			href={content && "/news/" + content.slug}
 		>
 
-			<div className={hideImage ? "hidden" : large ? "relative h-[338px]" : "relative h-[174px]"}>
+			<div className={renderImageHeight()}>
 
 				<ResponsiveImage
 					heroMedia={content.heroMedia}
@@ -64,7 +88,7 @@ const Card = (props) => {
 				<div className={`flex justify-between items-center ${large ? "mt-4" : "mt-3"}`}>
 
 					<span className={`body-sm ${darkTheme ? "text-grey" : "text-darkGrey"}`}>
-						{formatDate(content.publishDate)}
+						{FormatDate(content.publishDate)}
 					</span>
 
 					<Share

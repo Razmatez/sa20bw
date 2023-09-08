@@ -2,13 +2,11 @@ import Button from "../../01-atoms/button/button";
 import Card from "../../02-molecules/card/card";
 import CardsCarousel from "../../02-molecules/cards-carousel/cards-carousel";
 
-import isMobile from "../../../utils/isMobile";
+import IsMobile from "../../../utils/IsMobile";
 
 import content from "./dummy-data";
 
 const LatestNewsGrid = (props) => {
-
-	// const { content } = props;
 
 	return (
 
@@ -31,7 +29,7 @@ const LatestNewsGrid = (props) => {
 
 			</div>
 
-			{isMobile() ? (
+			{IsMobile() ? (
 
 				<div>
 
