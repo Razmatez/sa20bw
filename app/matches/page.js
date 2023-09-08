@@ -1,7 +1,4 @@
 "use client";
-
-import React, { useState } from "react";
-
 import Fixtures from "../../components/03-organisms/fixtures/fixtures";
 
 export default async function Page({ params }) {

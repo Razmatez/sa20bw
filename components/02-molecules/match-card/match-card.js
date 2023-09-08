@@ -1,36 +1,36 @@
-import React from 'react';
-import Lion from '../../../assets/icons/match-card/FixturesLion.svg';
-import Cape from '../../../assets/icons/match-card/FixturesCape.svg';
-import Button from '../../01-atoms/button/button';
+import Image from "next/image";
+import React from "react";
+
+import Button from "../../01-atoms/button/button";
+
+import Cape from "../../../assets/icons/match-card/FixturesCape.svg";
+import Lion from "../../../assets/icons/match-card/FixturesLion.svg";
 import Ticket from "../../../assets/icons/quick-links/Ticket-Blue.svg?url";
-import Image from "next/image"
 
 const MatchCard = () => {
-    // Define the data structure for a single match
+
     const matchData = {
-        date: 'Tuesday, 9 Jan 2024',
-        matchInfo: 'MATCH 1 | Starts in 5 days 4 hrs 37 mins',
+        date: "Tuesday, 9 Jan 2024",
+        matchInfo: "MATCH 1 | Starts in 5 days 4 hrs 37 mins",
         team1: {
-            name: 'Joburg Super Kings',
+            name: "Joburg Super Kings",
             logo: <Lion />,
         },
         team2: {
-            name: 'Joburg Super Kings',
+            name: "Joburg Super Kings",
             logo: <Cape />,
         },
-        time: '14:45 (sast) | st georges park',
+        time: "14:45 (sast) | st georges park",
     };
 
-    // Define the number of times you want to repeat the same match data
-    const repeatCount = 5; // Change this to the desired number of repetitions
+    const repeatCount = 5;
 
-    // Create an array with a length equal to repeatCount
     const repeatedMatches = new Array(repeatCount).fill(matchData);
 
     return (
         <div className="mt-4 container mx-auto">
             {repeatedMatches.map((match, index) => (
-                <div key={index}>
+                <div key={`match_${index}`}>
                     <h5 className="pb-4 lg:pb-6">{match.date}</h5>
 
                     <div className="flex gradient-blue-to-lime w-[384px] rounded-tl-2xl rounded-tr-2xl py-1 px-6 label-lg">
@@ -49,22 +49,20 @@ const MatchCard = () => {
                             <p className="pb-4 text-center">{match.time}</p>
 
                             <div className="flex items-center">
-
                                 <Button>
                                     <Image
                                         className="mr-3"
                                         src={Ticket}
                                         width={25}
                                         height={25}
-
-                                    />Buy Tickets</Button>
+                                    />
+                                    Buy Tickets
+                                </Button>
                             </div>
-
                         </div>
 
                         {/* Column 3 */}
                         <div className="w-1/4 lg:w-1/3 p-4 flex justify-end items-center flex-col-reverse lg:flex-row">
-
                             <h5 className="pr-8">{match.team2.name}</h5>
                             {match.team2.logo}
                         </div>
