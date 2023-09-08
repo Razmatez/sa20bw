@@ -8,7 +8,6 @@ import Lion from "../../../assets/icons/match-card/FixturesLion.svg";
 import Ticket from "../../../assets/icons/quick-links/Ticket-Blue.svg?url";
 
 const MatchCard = () => {
-
     const matchData = {
         date: "Tuesday, 9 Jan 2024",
         matchInfo: "MATCH 1 | Starts in 5 days 4 hrs 37 mins",
@@ -30,7 +29,7 @@ const MatchCard = () => {
     return (
         <div className="mt-4 container mx-auto">
             {repeatedMatches.map((match, index) => (
-                <div key={`match_${index}`}>
+                <div key={`match_${match.date}`}>
                     <h5 className="pb-4 lg:pb-6">{match.date}</h5>
 
                     <div className="flex gradient-blue-to-lime w-[384px] rounded-tl-2xl rounded-tr-2xl py-1 px-6 label-lg">
