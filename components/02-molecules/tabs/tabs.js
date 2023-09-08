@@ -1,6 +1,4 @@
 import Button from "../../01-atoms/button/button";
-// import Lion from "../../../assets/icons/match-card/FixturesLion.svg";
-// import Cape from "../../../assets/icons/match-card/FixturesCape.svg";
 import Results from "../../../assets/icons/match-card/results.svg";
 import Points from "../../../assets/icons/match-card/points-table.svg";
 import MatchCard from "../../02-molecules/match-card/match-card"
@@ -8,51 +6,11 @@ import MatchCard from "../../02-molecules/match-card/match-card"
 const Tabs = (props) => {
     const { activeTab } = props;
 
-
     const tabs = [
         {
             title: 'Fixtures',
             content: (
                 <MatchCard />
-
-                //<div className="mt-4 container mx-auto">
-                //     <div>
-                //         <h5>Tuesday, 9 Jan 2024</h5>
-
-                //         <div className="flex gradient-blue-to-lime w-[384px] rounded-tl-2xl rounded-tr-2xl pl-6">
-                //             <p className="mr-4">MATCH 1 |</p>
-                //             <p>Starts in 5 days 4 hrs 37 mins</p>
-                //         </div>
-
-                //         <div class="flex justify-center items-center bg-lightGrey mb-6 pb-6 rounded-tr-2xl rounded-br-2xl rounded-bl-2xl shadow-xl border border-darkGrey">
-
-                //             {/* <!-- Column 1 --> */}
-                //             <div class="w-1/3 p-4 flex justify-start items-center flex-col lg:flex-row">
-                //                 <Lion />
-                //                 <h5 className="pl-8">Joburg Super Kings</h5>
-
-                //             </div>
-
-                //             {/* <!-- Column 2 --> */}
-                //             <div class="w-1/3 p-4 flex justify-center items-center flex-col">
-
-                //                 <p className="pb-4">14:45 (sast) | st georges park</p>
-                //                 <Button>
-                //                     Buy Now
-                //                 </Button>
-
-                //             </div>
-
-                //             {/* <!-- Column 3 --> */}
-                //             <div class="w-1/3 p-4 flex justify-end items-center flex-col-reverse lg:flex-row">
-                //                 <h5 className="pr-8">Joburg Super Kings</h5>
-                //                 <Cape />
-
-
-                //             </div>
-                //         </div >
-                //     </div>
-                // </div>
             ),
         },
         {
