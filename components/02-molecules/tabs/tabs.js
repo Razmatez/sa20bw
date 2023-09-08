@@ -80,7 +80,7 @@ const Tabs = (props) => {
             {tabs.map((tab) => (
                 <div
                     key={tab.id}
-                    style={{ display: activeTab === tab.id ? "block" : "none" }}
+                    className={activeTab === tab.id ? "block" : "hidden"}
                 >
                     {tab.content}
                 </div>
