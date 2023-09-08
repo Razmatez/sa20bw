@@ -4,7 +4,7 @@ import Divider from "../../01-atoms/divider/divider";
 import ResponsiveImage from "../../01-atoms/image/responsiveImage";
 import Share from "../../01-atoms/share/share";
 
-import FormatDate from "../../../utils/FormatDate";
+import FormatDate from "../../../utils/formatDate";
 
 import PlayIcon from "../../../assets/icons/card/play.svg";
 

@@ -2,7 +2,7 @@ import Button from "../../01-atoms/button/button";
 import Card from "../../02-molecules/card/card";
 import CardsCarousel from "../../02-molecules/cards-carousel/cards-carousel";
 
-import IsMobile from "../../../utils/IsMobile";
+import IsMobile from "../../../utils/isMobile";
 
 import content from "./dummy-data";
 
