@@ -7,6 +7,7 @@ import CtaBanner from "../components/03-organisms/cta-banner/cta-banner"
 
 
 
+import LatestNewsGrid from "../components/03-organisms/latest-news-grid/latest-news-grid";
 
 export default function Home() {
 
@@ -19,6 +20,7 @@ export default function Home() {
 			<CtaBanner />
 			<CarouselSection darkTheme />
 			<Partnership />
+			<LatestNewsGrid />
 
 		</main >
 	)
