@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import Logo from "../../../assets/icons/logo/logo.svg";
-import Overlay from "../../../assets/icons/footer-image.svg";
+import Overlay from "../../../assets/icons/footer/footer-image.svg";
 
 
 import Divider from "../../01-atoms/divider/divider";
@@ -36,17 +36,17 @@ const Footer = () => {
 			</div>
 
 			{/* Conditional rendering for overlay image */}
-			<div className="invisible lg:visible absolute bottom-0 right-0 z-0 flex items-end justify-end opacity-100">
+			<div className="invisible lg:visible absolute bottom-0 right-0 z-0 opacity-60 h-full">
 
 				<Overlay
 					width={420}
-					height={520}
+					height={620}
 					alt="overlay"
 				/>
 
 			</div>
 
-			<Divider />
+			<Divider darkTheme />
 
 			<div className="text-lightGrey flex flex-col lg:flex-row justify-between pt-8 pl-8 pr-5 lg:pr-24 relative">
 

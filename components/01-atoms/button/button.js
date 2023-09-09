@@ -26,7 +26,7 @@ const Button = (props) => {
 				variantClassNames = "bg-lightBlue";
 				break;
 			case "invert":
-				variantClassNames = "bg-transparent rounded-md border-white border-2 border-solid"
+				variantClassNames = "bg-transparent border-white border-2 border-solid"
 			default: // primary
 				variantClassNames = "text-lightGrey bg-darkBlue hover:darkBlue90";
 		}
@@ -49,13 +49,13 @@ const Button = (props) => {
 
 		switch (size) {
 			case "sm":
-				sizeClassNames = `button-sm h-8 rounded-xl flex items-center justify-center ${renderIconPadding()}`;
+				sizeClassNames = `button-sm h-8 rounded-2xl flex items-center justify-center ${renderIconPadding()}`;
 				break;
 			case "lg":
-				sizeClassNames = `button-base h-12 rounded-xl flex items-center justify-center ${renderIconPadding()}`;
+				sizeClassNames = `button-base h-12 rounded-2xl flex items-center justify-center ${renderIconPadding()}`;
 				break;
 			default: // md
-				sizeClassNames = `button-base h-10 rounded-xl flex items-center justify-center ${renderIconPadding()}`;
+				sizeClassNames = `button-base h-10 rounded-2xl flex items-center justify-center ${renderIconPadding()}`;
 		}
 
 		return `${variantClassNames} ${sizeClassNames}`;

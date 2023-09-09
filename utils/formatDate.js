@@ -1,4 +1,4 @@
-const formatDate = (date) => {
+const FormatDate = (date) => {
 
 	let formattedDate = new Date(date);
 
@@ -12,4 +12,4 @@ const formatDate = (date) => {
 
 }
 
-export default formatDate;
+export default FormatDate;
