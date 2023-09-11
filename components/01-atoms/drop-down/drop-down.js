@@ -7,7 +7,7 @@ const Dropdown = () => {
         { label: 'Option 3', value: 'option3' },
     ];
 
-    const [options, setOptions] = useState(initialOptions);
+    const [options] = useState(initialOptions);
     const [selectedOption, setSelectedOption] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
 
@@ -28,7 +28,7 @@ const Dropdown = () => {
             </button>
 
             {isOpen && (
-                <ul className="dropdown-menu border border-grey rounded-2xl shadow-lg p-4 mt-[4px]">
+                <ul className="dropdown-menu border border-grey rounded-2xl shadow-lg p-4 mt-1">
                     {options.map((option) => (
                         <li
                             className="body-base cursor-pointer"
