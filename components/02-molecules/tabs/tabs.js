@@ -51,32 +51,31 @@ const Tabs = (props) => {
 
     return (
         <div>
-            <div className="overflow-x-auto hide-scrollbar">
-                {/* Container with horizontal scrolling */}
-                <div className="container mx-auto flex">
-                    {tabs.map((tab) => (
-                        <button
-                            key={tab.id}
-                            onClick={() => props.handleTabClick(tab.id)}
-                            className={`flex-grow min-w-[205px] ${activeTab === tab.id
-                                ? "border-b-4 border-darkBlue h6 text-darkBlue pt-9 pb-3"
-                                : "text-darkGrey h6 border-b-2 border-lightGrey pt-9 pb-3"
-                                }`}
-                        >
-                            <div className="flex items-center justify-center">
-                                {/* Place holder image */}
-                                <Image
-                                    className="mr-2"
-                                    width={40}
-                                    height={25}
-                                    src={Ticketred}
-                                />
-                                {tab.title}
-                            </div>
-                        </button>
-                    ))}
-                </div>
+            <div className="overflow-x-auto hide-scrollbar container mx-auto flex">
+
+                {tabs.map((tab) => (
+                    <button
+                        key={tab.id}
+                        onClick={() => props.handleTabClick(tab.id)}
+                        className={`flex-grow min-w-[205px] ${activeTab === tab.id
+                            ? "border-b-4 border-darkBlue h6 text-darkBlue pt-9 pb-3"
+                            : "text-darkGrey h6 border-b-2 border-lightGrey pt-9 pb-3"
+                            }`}
+                    >
+                        <div className="flex items-center justify-center">
+                            {/* Place holder image */}
+                            <Image
+                                className="mr-2"
+                                width={40}
+                                height={25}
+                                src={Ticketred}
+                            />
+                            {tab.title}
+                        </div>
+                    </button>
+                ))}
             </div>
+
             {tabs.map((tab) => (
                 <div
                     key={tab.id}
