@@ -13,6 +13,7 @@ const Fixtures = () => {
     return (
         <div>
             <Tabs activeTab={activeTab} handleTabClick={handleTabClick} />
+
         </div>
     );
 };
