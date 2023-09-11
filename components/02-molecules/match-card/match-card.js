@@ -30,7 +30,7 @@ const MatchCard = () => {
         <div className="mt-4 container mx-auto">
             {repeatedMatches.map((match, index) => (
                 <div key={`match_${match.date}`}>
-                    <h5 className="pb-4 lg:pb-6">{match.date}</h5>
+                    <h5 className="pb-4 lg:pb-6 pt-8 lg:pt-10">{match.date}</h5>
 
                     <div className="flex gradient-blue-to-lime w-[384px] rounded-tl-2xl rounded-tr-2xl py-1 px-6 label-lg">
                         <p className="mr-4">{match.matchInfo}</p>
@@ -40,7 +40,7 @@ const MatchCard = () => {
                         {/* Column 1 */}
                         <div className="w-1/4 lg:w-1/3 p-4 flex justify-start items-center flex-col lg:flex-row">
                             {match.team1.logo}
-                            <h5 className="pl-8">{match.team1.name}</h5>
+                            <h5 className="pl-0 lg:pl-8">{match.team1.name}</h5>
                         </div>
 
                         {/* Column 2 */}
@@ -62,7 +62,7 @@ const MatchCard = () => {
 
                         {/* Column 3 */}
                         <div className="w-1/4 lg:w-1/3 p-4 flex justify-end items-center flex-col-reverse lg:flex-row">
-                            <h5 className="pr-8">{match.team2.name}</h5>
+                            <h5 className="prlg:pr-0 text-right lg:text-left">{match.team2.name}</h5>
                             {match.team2.logo}
                         </div>
                     </div>

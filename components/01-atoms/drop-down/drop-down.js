@@ -1,13 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import Chev from "../../../assets/icons/chevron/chevron-down-dark.svg";
 
-const Dropdown = () => {
-    const initialOptions = [
-        { label: 'Option 1', value: 'option1' },
-        { label: 'Option 2', value: 'option2' },
-        { label: 'Option 3', value: 'option3' },
-    ];
-
-    const [options] = useState(initialOptions);
+const Dropdown = ({ options }) => {
     const [selectedOption, setSelectedOption] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
 
@@ -17,16 +11,14 @@ const Dropdown = () => {
     };
 
     return (
-        <div className="dropdown">
+        <div className="dropdown mr-4 mt-8">
             <button
-                className="dropdown-toggle border border-grey rounded-2xl body-lg py-2 pl-4"
+                className="dropdown-toggle border border-grey rounded-2xl body-lg py-2 pl-4 cursor-pointer flex items-center justify-between w-full"
                 onClick={() => setIsOpen(!isOpen)}
             >
-
-                {selectedOption ? selectedOption.label : 'Select an option'}
-
+                {selectedOption ? selectedOption.label : options[0].name}
+                <Chev className="mx-4" />
             </button>
-
             {isOpen && (
                 <ul className="dropdown-menu border border-grey rounded-2xl shadow-lg p-4 mt-1">
                     {options.map((option) => (
