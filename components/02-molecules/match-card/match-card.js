@@ -62,7 +62,7 @@ const MatchCard = () => {
 
                         {/* Column 3 */}
                         <div className="w-1/4 lg:w-1/3 p-4 flex justify-end items-center flex-col-reverse lg:flex-row">
-                            <h5 className="prlg:pr-0 text-right lg:text-left">{match.team2.name}</h5>
+                            <h5 className="pr-8 lg:pr-8 text-right lg:text-left">{match.team2.name}</h5>
                             {match.team2.logo}
                         </div>
                     </div>

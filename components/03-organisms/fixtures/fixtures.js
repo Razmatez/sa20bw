@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 import Tabs from "../../02-molecules/tabs/tabs";
 
 const Fixtures = () => {

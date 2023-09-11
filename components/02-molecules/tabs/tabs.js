@@ -4,11 +4,13 @@ import React from "react";
 import "./tabs.css";
 
 import Button from "../../01-atoms/button/button";
+import Dropdown from "../.././01-atoms/drop-down/drop-down";
 import MatchCard from "../../02-molecules/match-card/match-card";
+
 import Points from "../../../assets/icons/match-card/points-table.svg";
 import Results from "../../../assets/icons/match-card/results.svg";
 import Ticketred from "../../../assets/icons/quick-links/Ticket-Blue.svg?url";
-import Dropdown from "../.././01-atoms/drop-down/drop-down";
+
 
 
 const Tabs = (props) => {
