@@ -9,7 +9,7 @@ export default function ResponsiveImage(props) {
 		styles
 	} = props;
 
-	const defaultStyle = "w-full"
+	const defaultStyle = "w-full object-cover";
 
 	return (
 		<div>

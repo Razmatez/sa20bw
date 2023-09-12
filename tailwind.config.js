@@ -48,6 +48,9 @@ module.exports = {
 				darkBlue20: "#CECCD8",
 				darkBlue10: "#E7E6EC"
 			},
+			container: {
+				center: true
+			},
 			fontFamily: {
 				"barlow": ["Barlow Semi Condensed Bold", "sans-serif"],
 				"rubik": ["Rubik", "sans-serif"],
