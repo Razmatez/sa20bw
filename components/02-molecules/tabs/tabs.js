@@ -4,10 +4,13 @@ import React from "react";
 import "./tabs.css";
 
 import Button from "../../01-atoms/button/button";
+import Dropdown from "../.././01-atoms/drop-down/drop-down";
 import MatchCard from "../../02-molecules/match-card/match-card";
+
 import Points from "../../../assets/icons/match-card/points-table.svg";
 import Results from "../../../assets/icons/match-card/results.svg";
 import Ticketred from "../../../assets/icons/quick-links/Ticket-Blue.svg?url";
+
 
 
 const Tabs = (props) => {
@@ -17,7 +20,11 @@ const Tabs = (props) => {
         {
             id: "fixtures",
             title: "Fixtures",
-            content: <MatchCard />,
+            content: <>
+
+                <MatchCard />
+
+            </>,
         },
         {
             id: "results",
@@ -74,6 +81,60 @@ const Tabs = (props) => {
                         </div>
                     </button>
                 ))}
+            </div>
+            <div className="container mx-auto hidden lg:flex">
+                <Dropdown
+                    options={[
+                        {
+                            name: "Season 2024",
+                            label: "2023/2024",
+                            value: "2023/2024",
+                        },
+                        {
+                            label: "2022/2023",
+                            value: "2022/2023",
+                        },
+                        {
+                            label: "2021/2022",
+                            value: "2021/2022",
+                        },
+                    ]}
+                />
+                <Dropdown
+                    options={[
+                        {
+                            name: "All Teams",
+                            label: "Joburg Super Kings",
+                            value: "Joburg Super Kings",
+                        },
+                        {
+                            label: "Cape town",
+                            value: "Cape town",
+                        },
+                        {
+                            label: "Mpumalanga",
+                            value: "Mpumalanga",
+                        },
+                    ]}
+                />
+
+                <Dropdown
+                    options={[
+                        {
+                            name: "All Locations",
+                            label: "Johannesburg",
+                            value: "Johannesburg",
+                        },
+                        {
+                            label: "Paarl",
+                            value: "Paarl",
+                        },
+                        {
+                            label: "Cape Town",
+                            value: "Cape Town",
+                        },
+                    ]}
+                />
             </div>
 
             {tabs.map((tab) => (
