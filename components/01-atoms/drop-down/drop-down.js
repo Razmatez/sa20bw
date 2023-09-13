@@ -16,7 +16,7 @@ const Dropdown = ({ options }) => {
 		<div className="dropdown relative">
 
 			<button
-				className="dropdown-toggle flex items-center justify-between w-full h-12 px-4 border border-grey rounded-2xl cursor-pointer"
+				className="dropdown-toggle flex items-center justify-between w-full h-10 lg:h-12 px-4 border border-grey rounded-2xl cursor-pointer"
 				onClick={() => setIsOpen(!isOpen)}
 			>
 				<div className="body-lg">
@@ -34,7 +34,7 @@ const Dropdown = ({ options }) => {
 					{options.map((option) => (
 
 						<li
-							className={`cursor-pointer p-4 hover:bg-lightGrey ${selectedOption === option ? "body-base-bold" : "body-base"}`}
+							className={`cursor-pointer py-3 px-4 lg:p-4 hover:bg-lightGrey ${selectedOption === option ? "body-base-bold" : "body-base"}`}
 							key={option.value}
 							onClick={() => handleOptionClick(option)}
 						>

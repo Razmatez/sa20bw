@@ -9,14 +9,14 @@ import content from "./dummy-data";
 const LatestNewsGrid = (props) => {
 
 	const {
-		showHeading = true
+		showGridOnly = false
 	} = props;
 
 	return (
 
-		<div className="container">
+		<div className="container px-0">
 
-			{showHeading && (
+			{!showGridOnly && (
 
 				<div className="flex justify-between items-center mb-6 lg:mb-8">
 
@@ -47,16 +47,20 @@ const LatestNewsGrid = (props) => {
 
 					</div>
 
-					<div className="flex justify-center mt-8 lg:hidden">
+					{!showGridOnly && (
 
-						<Button
-							withArrowRight
-							variant="tertiary"
-						>
-							{content.cta}
-						</Button>
+						<div className="flex justify-center mt-8 lg:hidden">
 
-					</div>
+							<Button
+								withArrowRight
+								variant="tertiary"
+							>
+								{content.cta}
+							</Button>
+
+						</div>
+
+					)}
 
 				</div>
 

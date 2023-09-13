@@ -19,7 +19,7 @@ const IsMobile = () => {
 
 	  }, []);
 
-	  return width < 1280;
+	  return width < 1024;
 
 }
 

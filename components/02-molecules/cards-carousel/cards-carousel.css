@@ -1,5 +1,5 @@
 .cards-carousel .swiper {
-	@apply py-1 px-6 lg:p-1;
+	@apply py-1 px-5 lg:p-1;
 }
 
 .cards-carousel .swiper-button-disabled svg {
