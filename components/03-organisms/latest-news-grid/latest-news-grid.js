@@ -8,26 +8,34 @@ import content from "./dummy-data";
 
 const LatestNewsGrid = (props) => {
 
+	const {
+		showGridOnly = false
+	} = props;
+
 	return (
 
-		<div className="py-10 lg:py-20 lg:px-16">
+		<div className="container px-0">
 
-			<div className="flex justify-between items-center mb-6 lg:mb-8">
+			{!showGridOnly && (
 
-				<h2 className="h3 lg:h2 ml-5 lg:ml-0">{content.heading}</h2>
+				<div className="flex justify-between items-center mb-6 lg:mb-8">
 
-				<div className="hidden lg:flex">
+					<h2 className="h3 lg:h2 ml-5 lg:ml-0">{content.heading}</h2>
 
-					<Button
-						withArrowRight
-						variant="tertiary"
-					>
-						{content.cta}
-					</Button>
+					<div className="hidden lg:flex">
+
+						<Button
+							withArrowRight
+							variant="tertiary"
+						>
+							{content.cta}
+						</Button>
+
+					</div>
 
 				</div>
 
-			</div>
+			)}
 
 			{IsMobile() ? (
 
@@ -39,16 +47,20 @@ const LatestNewsGrid = (props) => {
 
 					</div>
 
-					<div className="flex justify-center mt-8 lg:hidden">
+					{!showGridOnly && (
 
-						<Button
-							withArrowRight
-							variant="tertiary"
-						>
-							{content.cta}
-						</Button>
+						<div className="flex justify-center mt-8 lg:hidden">
 
-					</div>
+							<Button
+								withArrowRight
+								variant="tertiary"
+							>
+								{content.cta}
+							</Button>
+
+						</div>
+
+					)}
 
 				</div>
 

@@ -7,7 +7,9 @@ const Button = (props) => {
 		size,
 		styles,
 		withArrowLeft,
-		withArrowRight
+		withArrowRight,
+		withCustomIconLeft,
+		withCustomIconRight
 	} = props;
 
 	const renderClassNames = () => {
@@ -16,19 +18,19 @@ const Button = (props) => {
 		let sizeClassNames = "";
 
 		switch (variant) {
-			case "secondary":
-				variantClassNames = "bg-transparent border-darkBlue border-2 border-solid hover:bg-darkBlue10";
-				break;
-			case "tertiary":
-				variantClassNames = "";
-				break;
-			case "blue":
-				variantClassNames = "bg-lightBlue";
-				break;
-			case "invert":
-				variantClassNames = "bg-transparent border-white border-2 border-solid"
-			default: // primary
-				variantClassNames = "text-lightGrey bg-darkBlue hover:darkBlue90";
+		case "secondary":
+			variantClassNames = "bg-transparent border-darkBlue border-2 border-solid hover:bg-darkBlue10";
+			break;
+		case "tertiary":
+			variantClassNames = "";
+			break;
+		case "blue":
+			variantClassNames = "bg-lightBlue";
+			break;
+		case "invert":
+			variantClassNames = "bg-transparent border-white border-2 border-solid"
+		default: // primary
+			variantClassNames = "text-lightGrey bg-darkBlue hover:darkBlue90";
 		}
 
 		const renderIconPadding = () => {
@@ -36,9 +38,9 @@ const Button = (props) => {
 			if (variant === "tertiary") {
 				return "";
 			} else {
-				if (withArrowLeft) {
+				if (withArrowLeft || withCustomIconLeft) {
 					return "pl-3 pr-4";
-				} else if (withArrowRight) {
+				} else if (withArrowRight || withCustomIconRight) {
 					return "pl-4 pr-3";
 				} else {
 					return "px-4";
@@ -48,14 +50,14 @@ const Button = (props) => {
 		}
 
 		switch (size) {
-			case "sm":
-				sizeClassNames = `button-sm h-8 rounded-2xl flex items-center justify-center ${renderIconPadding()}`;
-				break;
-			case "lg":
-				sizeClassNames = `button-base h-12 rounded-2xl flex items-center justify-center ${renderIconPadding()}`;
-				break;
-			default: // md
-				sizeClassNames = `button-base h-10 rounded-2xl flex items-center justify-center ${renderIconPadding()}`;
+		case "sm":
+			sizeClassNames = `button-sm h-8 rounded-2xl flex items-center justify-center ${renderIconPadding()}`;
+			break;
+		case "lg":
+			sizeClassNames = `button-base h-12 rounded-2xl flex items-center justify-center ${renderIconPadding()}`;
+			break;
+		default: // md
+			sizeClassNames = `button-base h-10 rounded-2xl flex items-center justify-center ${renderIconPadding()}`;
 		}
 
 		return `${variantClassNames} ${sizeClassNames}`;

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+main {
+	@apply relative mt-15 xl:mt-36 overflow-hidden;
+}
+
 @layer base {
 
 	@font-face {

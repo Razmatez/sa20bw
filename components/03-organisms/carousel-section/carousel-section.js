@@ -12,7 +12,7 @@ const CarouselSection = (props) => {
 
 	return (
 
-		<div className="py-10 lg:py-18 lg:px-16">
+		<div className="container py-10 lg:py-18 px-0">
 
 			<div className="flex justify-between items-center mb-6 lg:mb-8">
 

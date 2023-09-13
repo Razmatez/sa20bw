@@ -9,7 +9,7 @@ import LatestNewsGrid from "../components/03-organisms/latest-news-grid/latest-n
 export default function Home() {
 
 	return (
-		<main className="relative mt-15 xl:mt-36 overflow-hidden">
+		<main>
 
 			<HeroCarousel />
 			<QuickLinks />

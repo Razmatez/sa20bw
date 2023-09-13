@@ -5,6 +5,7 @@ import ResponsiveImage from "../../01-atoms/image/responsiveImage";
 import Share from "../../01-atoms/share/share";
 
 import FormatDate from "../../../utils/formatDate";
+import IsMobile from "../../../utils/isMobile";
 
 import PlayIcon from "../../../assets/icons/card/play.svg";
 
@@ -14,6 +15,7 @@ const Card = (props) => {
 		content,
 		darkTheme,
 		hideImage = false,
+		horizontalMobile = false,
 		large = false
 	} = props;
 
@@ -43,67 +45,115 @@ const Card = (props) => {
 
 	return (
 
-		<Link
-			className={`block w-full h-full shadow-1 rounded-2xl overflow-hidden ${renderCardHeight()}`}
-			href={content && "/news/" + content.slug}
-		>
+		horizontalMobile && IsMobile()  ? (
 
-			<div className={renderImageHeight()}>
+			<>
+				<Link
+					className="block py-4 first:pt-0 last:pb-0"
+					href={content && "/news/" + content.slug}
+				>
 
-				<ResponsiveImage
-					heroMedia={content.heroMedia}
-				/>
+					<div className="flex">
 
-				{content.heroMedia.content.contentType === "VIDEO" && (
+						<div className="relative min-w-[135px] h-[93px] rounded-xl overflow-hidden">
 
-					<div className="absolute bottom-0 w-12 h-12 flex justify-center items-center bg-lightBlue rounded-tr-2xl">
+							<ResponsiveImage
+								heroMedia={content.heroMedia}
+							/>
 
-						<PlayIcon
-							width={24}
-							height={24}
-							alt="video"
-						/>
+						</div>
+
+						<div className="py-1.5 px-4">
+
+							{content.heroMedia.category && (
+
+								<div className="label-sm">
+									{content.heroMedia.category}
+								</div>
+
+							)}
+
+							<h6 className="h7">
+								{content.heroMedia.title}
+							</h6>
+
+						</div>
 
 					</div>
-				)}
 
-			</div>
+				</Link>
 
-			<div className={`${large ? "p-6" : "p-4"} ${darkTheme ? "bg-darkBlue" : "bg-white"}`}>
+				<div className="last:hidden">
+					<Divider />
+				</div>
 
-				{content.heroMedia.category && (
+			</>
 
-					<div className={`${large ? "label-lg" : "label-base"} ${darkTheme ? "text-lightBlue" : "text-darkBlue"}`}>
-						{content.heroMedia.category}
-					</div>
+		) : (
 
-				)}
+			<Link
+				className={`block w-full h-full shadow-1 rounded-2xl overflow-hidden ${renderCardHeight()}`}
+				href={content && "/news/" + content.slug}
+			>
 
-				<h6 className={`${large ? "mt-2 mb-4 h-16" : "mt-1 mb-3 h-18"} ${darkTheme ? "text-white" : "text-darkBlue"}`}>
-					{content.heroMedia.title}
-				</h6>
+				<div className={renderImageHeight()}>
 
-				<Divider darkTheme={darkTheme} />
-
-				<div className={`flex justify-between items-center ${large ? "mt-4" : "mt-3"}`}>
-
-					<span className={`body-sm ${darkTheme ? "text-grey" : "text-darkGrey"}`}>
-						{FormatDate(content.publishDate)}
-					</span>
-
-					<Share
-						darkTheme={darkTheme}
-						large={large}
+					<ResponsiveImage
+						heroMedia={content.heroMedia}
 					/>
+
+					{content.heroMedia.content.contentType === "VIDEO" && (
+
+						<div className="absolute bottom-0 w-12 h-12 flex justify-center items-center bg-lightBlue rounded-tr-2xl">
+
+							<PlayIcon
+								width={24}
+								height={24}
+								alt="video"
+							/>
+
+						</div>
+					)}
 
 				</div>
 
-			</div>
+				<div className={`${large ? "p-6" : "p-4"} ${darkTheme ? "bg-darkBlue" : "bg-white"}`}>
 
-		</Link>
+					{content.heroMedia.category && (
 
-	);
+						<div className={`${large ? "label-lg" : "label-base"} ${darkTheme ? "text-lightBlue" : "text-darkBlue"}`}>
+							{content.heroMedia.category}
+						</div>
 
-};
+					)}
+
+					<h6 className={`${large ? "mt-2 mb-4 h-16" : "mt-1 mb-3 h-18"} ${darkTheme ? "text-white" : "text-darkBlue"}`}>
+						{content.heroMedia.title}
+					</h6>
+
+					<Divider darkTheme={darkTheme} />
+
+					<div className={`flex justify-between items-center ${large ? "mt-4" : "mt-3"}`}>
+
+						<span className={`body-sm ${darkTheme ? "text-grey" : "text-darkGrey"}`}>
+							{FormatDate(content.publishDate)}
+						</span>
+
+						<Share
+							darkTheme={darkTheme}
+							large={large}
+						/>
+
+					</div>
+
+				</div>
+
+			</Link>
+
+		)
+
+	)
+
+}
 
 export default Card;
