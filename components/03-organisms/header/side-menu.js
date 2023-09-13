@@ -31,9 +31,9 @@ const SideMenu = (props) => {
 			dropdownChevron.classList.toggle("rotate");
 		});
 
-	  return () => {
+		return () => {
 
-	  }
+		}
 
 	}, [])
 
@@ -44,10 +44,10 @@ const SideMenu = (props) => {
 
 			<div className={`side-menu ${open ? "open" : ""} xl:hidden`}>
 
-				<div className="flex items-center justify-end h-14 mr-4">
+				<div className="flex justify-end items-center mr-4 h-14">
 
 					<button
-						className="w-6 h-6 mr-6"
+						className="mr-6 w-6 h-6"
 						type="button"
 					>
 
@@ -75,30 +75,30 @@ const SideMenu = (props) => {
 
 				</div>
 
-				<div className="side-menu-contents flex flex-col justify-between py-5 pr-5 pl-8">
+				<div className="flex flex-col justify-between py-5 pr-5 pl-8 side-menu-contents">
 
 					<div>
 
 						<ul>
 
-							{content.map((item, index) => (
+							{content.map(item => (
 
 								<li
-									className="mt-4 first:mt-0 list-none"
-									key={index}
+									className="mt-4 list-none first:mt-0"
+									key={item.id}
 								>
 
 									<Link
 										className={`flex justify-between w-full button-base text-lightGrey ${item.children ? "side-menu-item-dropdown-btn" : ""}`}
-										href={item.link}
+										href={item.link || "#"}
 									>
 
-										<span>{item.item.toUpperCase()}</span>
+										<span>{item.label.toUpperCase()}</span>
 
-										{item.children && (
+										{item.children.length === 0 || (
 
 											<ChevronDown
-												className="side-menu-item-chevron ml-2"
+												className="ml-2 side-menu-item-chevron"
 												width={24}
 												height={24}
 												alt="expand"
@@ -108,16 +108,16 @@ const SideMenu = (props) => {
 
 									</Link>
 
-									{item.children && (
+									{item.children.length === 0 || (
 
-										<div className="side-menu-item-dropdown pb-4 pl-4">
+										<div className="pb-4 pl-4 side-menu-item-dropdown">
 
-											{item.children.map((child, childIndex) => (
+											{item.children.map(child => (
 
 												<Link
 													className="flex pt-4 body-sm text-grey"
-													key={childIndex}
-													href={child.link}
+													key={child.id}
+													href={child.link || "#"}
 												>
 													{child.item}
 												</Link>
@@ -159,7 +159,7 @@ const SideMenu = (props) => {
 						</div>
 
 						<Link
-							className="block button-sm text-lightGrey py-8"
+							className="block py-8 button-sm text-lightGrey"
 							href="/tickets"
 						>
 							BUY TICKETS

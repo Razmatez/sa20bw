@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,40 +16,29 @@ import SearchIcon from "../../../assets/icons/header/search.svg";
 
 import "./header.css";
 
-const Header = (props) => {
+function Header() {
 
-	// const { content } = props;
-
-	const [menuOpen, setMenuOpen] = useState(false);;
-
-	// Temp props
-	const content = [
-		{ item: "News", link: "/news" },
-		{ item: "Matches", link: "/matches" },
-		{ item: "Videos", link: "/videos" },
-		{ item: "Stats", link: "/stats" },
-		{ item: "Teams", link: "/teams" },
-		{ item: "More", link: "",
-			children: [
-				{ item: "About SA20", link: "/about" },
-				{ item: "Gallery", link: "/gallery" },
-				{ item: "Fan Poll", link: "/fan-poll" },
-				{ item: "Auction", link: "/auction" }
-			]
-		}
-	]
+	const [menuOpen, setMenuOpen] = useState(false);
+	const [content, setContent] = useState();
 
 	const handleMenuToggle = () => setMenuOpen(!menuOpen);
 
+	useEffect(() => {
+		fetch(process.env.NEXT_PUBLIC_NAVIGATION_URL, { cache: "force-cache" })
+			.then((res) => res.json())
+			.then((content) => setContent(content.data.children))
+			.catch(err => console.log(err))
+	}, [])
+
 	return (
 
-		<nav className="fixed top-0 w-full h-15 xl:h-36 z-50">
+		<nav className="fixed top-0 z-50 w-full xl:h-36 h-15">
 
 			{/* Secondary menu */}
-			<div className="hidden xl:flex items-center justify-end w-full h-12 pr-16 bg-darkBlue90">
+			<div className="hidden justify-end items-center pr-16 w-full h-12 xl:flex bg-darkBlue90">
 
 				<Link
-					className="flex items-center mr-6 px-4 py-3 button-sm text-lightGrey"
+					className="flex items-center py-3 px-4 mr-6 button-sm text-lightGrey"
 					href="/tickets"
 				>
 					BUY TICKETS
@@ -58,7 +47,7 @@ const Header = (props) => {
 				<div className="w-px h-6 bg-darkBlue30" />
 
 				<Link
-					className="flex items-center mx-6 pl-3 pr-4 button-sm text-lightGrey"
+					className="flex items-center pr-4 pl-3 mx-6 button-sm text-lightGrey"
 					href="/login"
 				>
 
@@ -79,11 +68,11 @@ const Header = (props) => {
 			</div>
 
 			{/* Primary menu */}
-			<div className="relative flex flex-nowrap w-full h-15 xl:h-24 items-center justify-between bg-darkBlue px-5 xl:px-16">
+			<div className="flex relative flex-nowrap justify-between items-center px-5 w-full xl:px-16 xl:h-24 h-15 bg-darkBlue">
 
 				<Link href="/">
 
-					<div className="flex w-[190px] h-7 xl:w-[284px] xl:h-10">
+					<div className="flex h-7 xl:h-10 w-[190px] xl:w-[284px]">
 						<Image
 							src={Logo}
 							alt="logo"
@@ -123,29 +112,28 @@ const Header = (props) => {
 				</div>
 
 				{/* Desktop */}
-				<div className="hidden xl:flex w-full justify-between items-center">
+				<div className="hidden justify-between items-center w-full xl:flex">
 
 					<ul className="flex mx-auto">
 
-						{content.map((item, index) => (
-
+						{content && content.map(item => (
 							<li
-								className="menu-item relative w-[110px] list-none py-9"
-								key={index}
+								className="relative py-9 list-none menu-item w-[110px]"
+								key={item.id}
 							>
 
 								<Link
-									className="w-full flex justify-center button-base text-lightGrey hover:text-lightBlue"
-									href={item.link}
+									className="flex justify-center w-full button-base text-lightGrey hover:text-lightBlue"
+									href={item.link || "#"}
 								>
 
 									<span>
-										{item.item.toUpperCase()}
+										{item.label.toUpperCase()}
 									</span>
 
-									{item.children && (
+									{item.children.length === 0 || (
 
-										<div className="w-6 h-6 ml-2">
+										<div className="ml-2 w-6 h-6">
 
 											<ChevronDown
 												className="menu-item-chevron"
@@ -158,18 +146,18 @@ const Header = (props) => {
 
 								</Link>
 
-								{item.children && (
+								{item.children.length === 0 || (
 
 									<div className="menu-item-dropdown">
 
-										{item.children.map((child, childIndex) => (
+										{item.children.map(child => (
 
 											<Link
-												className="flex w-full p-4 text-lightGrey h7 hover:bg-darkBlue90"
-												key={childIndex}
-												href={child.link}
+												className="flex p-4 w-full text-lightGrey h7 hover:bg-darkBlue90"
+												key={child.id}
+												href={child.link || "#"}
 											>
-												{child.item.toUpperCase()}
+												{child.label.toUpperCase()}
 											</Link>
 
 										))}
@@ -221,11 +209,13 @@ const Header = (props) => {
 			</div>
 
 			{/* Mobile */}
-			<SideMenu
-				open={menuOpen}
-				content={content}
-				onClose={handleMenuToggle}
-			/>
+			{content &&
+				<SideMenu
+					open={menuOpen}
+					content={content}
+					onClose={handleMenuToggle}
+				/>
+			}
 
 		</nav>
 
