@@ -8,6 +8,8 @@ import LatestNewsGrid from "../../components/03-organisms/latest-news-grid/lates
 
 import ChevronDown from "../../assets/icons/chevron/chevron-down-dark.svg";
 
+import "./page.css";
+
 async function fetchArticles() {
 
 	const response = await fetch(process.env.NEXT_PUBLIC_ARTICLE_BASE_URL + "/v2/articles?clientId=" + process.env.NEXT_PUBLIC_CLIENT_ID, { cache: "force-cache" });
@@ -23,7 +25,7 @@ export default async function Page() {
 
 		<main>
 
-			<div className="bg-lightGrey">
+			<div className="background-image bg-lightGrey">
 
 				<div className="container py-10 lg:py-16 px-0">
 

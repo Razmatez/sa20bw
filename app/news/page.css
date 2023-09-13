@@ -1,0 +1,13 @@
+.background-image {
+	background-image: url('../../assets/images/news/background-image-mobile.svg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 1024px) {
+
+	.background-image {
+		background-image: url('../../assets/images/news/background-image.svg');
+	}
+
+}
