@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,21 +16,19 @@ import SearchIcon from "../../../assets/icons/header/search.svg";
 
 import "./header.css";
 
-async function fetchMenu() {
-	const response = await fetch("https://feeds.incrowdsports.com/provider/navigation-management-system-stage/v1/clients/SA20/navigations/64da3df180bc25f56542bd45");
-	return await response.json();
-}
-
-const Header = async (props) => {
-
+function Header() {
 
 	const [menuOpen, setMenuOpen] = useState(false);
+	const [content, setContent] = useState();
 
 	const handleMenuToggle = () => setMenuOpen(!menuOpen);
 
-	const menu = await fetchMenu();
-
-	const content = menu.data.children;
+	useEffect(() => {
+		fetch(process.env.NEXT_PUBLIC_NAVIGATION_URL, { cache: "force-cache" })
+			.then((res) => res.json())
+			.then((content) => setContent(content.data.children))
+			.catch(err => console.log(err))
+	}, [])
 
 	return (
 
@@ -118,7 +116,7 @@ const Header = async (props) => {
 
 					<ul className="flex mx-auto">
 
-						{content.map(item => (
+						{content && content.map(item => (
 							<li
 								className="relative py-9 list-none menu-item w-[110px]"
 								key={item.id}
@@ -211,11 +209,13 @@ const Header = async (props) => {
 			</div>
 
 			{/* Mobile */}
-			<SideMenu
-				open={menuOpen}
-				content={content}
-				onClose={handleMenuToggle}
-			/>
+			{content &&
+				<SideMenu
+					open={menuOpen}
+					content={content}
+					onClose={handleMenuToggle}
+				/>
+			}
 
 		</nav>
 
